@@ -1,0 +1,1185 @@
+{
+	"info": {
+		"_postman_id": "8643c645-5bca-432b-a034-005e0f7a5c2d",
+		"name": "LocalFlatsApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserRegsiter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q5MjJmODM2ZWQ3NzI1Mjg4YzBiYWYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc4Mzc5NzJ9.yG2eoaQeN41D3AbLRlW7YVzw3q0ub4ZRl9S8ekdAFH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"nadeem1@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  },\n  \n  \"Role\": \"Admin\"\n  \n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLoginAndAgentGetToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"nadeem@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUserDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzcxMDl9.CmxF4w381Rd-JDXECDOXOLcpIYpY64Drf5Ltw0ZMYU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"username\": \"arvinder@gmail.com\",\n    \"Role\": \"Agent\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUserRole",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NDYwMzN9.vYH-bWFXZgmjo4u5Bj2KWHskB5J3sX7xN3VVOtIAY6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/userRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"userRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserUpdate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzcxMDl9.CmxF4w381Rd-JDXECDOXOLcpIYpY64Drf5Ltw0ZMYU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\": \"kunal7861@gmail.com\",\n  \"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/5ccc471041c5871d34d26cf4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"5ccc471041c5871d34d26cf4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserQuestions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzcxMDl9.CmxF4w381Rd-JDXECDOXOLcpIYpY64Drf5Ltw0ZMYU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5ccac5d50009b00c4036b8b3\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/questions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"questions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserUpdateQuestions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzcxMDl9.CmxF4w381Rd-JDXECDOXOLcpIYpY64Drf5Ltw0ZMYU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"questions\": {\n        \"LookingRoommate\": {\n            \"Quiet\": \"\",\n            \"Loud\": \"\",\n            \"Tidy\": \"\",\n            \"Messy\": \"Active\"\n        },\n        \"LookingInRoommates\": {\n            \"Quiet\": \"\",\n            \"Loud\": \"\",\n            \"Tidy\": \"\",\n            \"Messy\": \"Active\"\n        },\n        \"BedTime\": {\n            \"time1\": \"\",\n            \"time2\": \"11pm\",\n            \"time3\": \"\"\n        },\n        \"DoYouDrink\": {\n            \"Yes\": \"\",\n            \"No\": \"no\"\n        },\n        \"DoYouSmoke\": {\n            \"Yes\": \"yes\",\n            \"No\": \"\"\n        },\n        \"LikeGoOut\": {\n            \"Yes\": \"\",\n            \"No\": \"no\"\n        },\n        \"Workhours\": {\n            \"FullTime\": \"\",\n            \"PartTime\": \"\",\n            \"StudentFullTime\": \"Active\",\n            \"StudentPartTime\": \"\"\n        }\n    }\n   \n   }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/questions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"questions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAllUsersDetails- admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q5NDZhMWEzNzVhZDJlYTA3NGFhZjMiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc4MzcyMTF9.vB6N98RggM2P6en4gNpQAGRCnzeEYnbwkRo5oCSuaAA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/fetchAllUsersDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"fetchAllUsersDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserDelete - admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q5NDZhMWEzNzVhZDJlYTA3NGFhZjMiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc4MzcyMTF9.vB6N98RggM2P6en4gNpQAGRCnzeEYnbwkRo5oCSuaAA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/5cd914c873de9f0efcffb216",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"5cd914c873de9f0efcffb216"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentLoginAndGetToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"arvinder@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzVkODEyMTE2NjI4YzQ0ZTJhMWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzczOTl9.jGBjVMehrlINqfQyu1IgnSgj8iRIlrPqvJ0PcHMdGxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"kunal@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/agentId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"agentId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAllAgentsDetails - admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee03355a-3c67-47a0-91b8-4f8ae2021660",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2ODE2NDY0MzE0MDE1ZGNlYzlmZGEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc1NjI3MTJ9.p-ov-fl8pQ26JJ1Vm-fdZO8JpZLWSeQFkdH5qHZTPz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/fetchAllAgentDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"fetchAllAgentDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentUpdate Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2QzYzExMzkwOTVkMTI5NTBlNWYzZTMiLCJpYXQiOjE1NTczODgxMjB9.tOvhbLJ0HaaTTGS8RBCy0snxmE2QNZDkotwtwmiy_wM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n \t\n \t\"username\": \"kunal121@gmail.com\",\n \t\"password\": \"123456\"\n \t\n }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/agents/5cd3f8587fddda0a28fc490a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"agents",
+						"5cd3f8587fddda0a28fc490a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAgentDetails",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee03355a-3c67-47a0-91b8-4f8ae2021660",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MTYyMDR9.-0nINkiPqVfCXOaG77m3L5lo5_oGThOp5wOSbXEQSlI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"sidak@gmail.com\",\n  \"password\": \"123456\",\n   \"Role\": \"Agent\"  ,   \n    \"Images\":{\n  \t\t\t \"ProfileImage\":{\n  \t\t\t\t \"imageName\": \"This is image updated for Sidak Agent\",\n\t\t\t\t  \"imageData\": \"This is image Data updated for Sidak Agent\"\n  \t\t\t},\n  \t\t\t\n  \t\t\t\"CoverImage\":{\n\t\t\t\t  \"imageName\": \"This is image Name\",\n\t\t\t\t  \"imageData\": \"This is image Data\"\n  \t\t\t}\n  }\n  \t  \n  \t  \n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/5cd68d0c068f4400a062005b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"5cd68d0c068f4400a062005b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRoomsAgentList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzVkODEyMTE2NjI4YzQ0ZTJhMWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEwNDV9.zmCYUFW0JwcKK8iP-7Ji9rL6hlS8rjzsKiv3_zLnLSM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the Roomsfdfd List title\",\t\n\t\"description\": \"This is the fdfdlist description\",\n\t\"address\": \"This is the Listfdfd Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Imageffd Name\",\n\t\t\"imageData\": \"Image fdData\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/roomsList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"roomsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveRoomsAgentList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/roomsList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"roomsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveSingleRoomAgentList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/roomsList/5cda9d92a3369510d4d62bcd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"roomsList",
+						"5cda9d92a3369510d4d62bcd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRoomAgentList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the Room List titles\",\t\n\t\"description\": \"This is the Room List description\",\n\t\"address\": \"This is the Room list Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Room Name\",\n\t\t\"imageData\": \"Room Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/roomsList/5cda9ca0a3369510d4d62bc7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"roomsList",
+						"5cda9ca0a3369510d4d62bc7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRoomAgentList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/roomsList/5cda9d92a3369510d4d62bcd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"roomsList",
+						"5cda9d92a3369510d4d62bcd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAparmentAgentList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the Appartment title\",\t\n\t\"description\": \"This is the list description\",\n\t\"address\": \"This is the List Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Image Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/aparmentList/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"aparmentList",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveAparmentAgentList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/aparmentList/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"aparmentList",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveSingleAparmentAgentList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/aparmentList/5cd96a71cb6f2e2f0016e8d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"aparmentList",
+						"5cd96a71cb6f2e2f0016e8d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAparmentAgentList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/aparmentList/5cd96b177b3e3a086c7cded1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"aparmentList",
+						"5cd96b177b3e3a086c7cded1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAparmentAgentList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the Updated title\",\t\n\t\"description\": \"This is the list description\",\n\t\"address\": \"This is the List Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Image Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/aparmentList/5cd96a71cb6f2e2f0016e8d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"aparmentList",
+						"5cd96a71cb6f2e2f0016e8d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentAgentRole",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NDgxMDN9.FTGnaQGwrl7Jf5CHA52kZw1Iae6QpGMfQRnpaBqEsdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/agentRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"agentRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PropertyPostListing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2NhYzVkNTAwMDliMDBjNDAzNmI4YjMiLCJpYXQiOjE1NTY4MDMxMTR9._wJ5LlslHbDhXxYtCtUIZhS_z9ArVWYNw-tXorHz3Fk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n   \"title\": \"Tittle\",\n   \"description\": \"description\",\n   \"address\": \"Adreess goes here\",\n   \"ListImage\":{\n   \t\t\t\t\"imageName\": \"Listing Imgae Name\",\n   \t\t\t\t\"imageData\": \"This is listing image data\"\n   \t\n                }\n                \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/lists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PropertyGetListing",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2NhYzVkNTAwMDliMDBjNDAzNmI4YjMiLCJpYXQiOjE1NTY4MDMxMTR9._wJ5LlslHbDhXxYtCtUIZhS_z9ArVWYNw-tXorHz3Fk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n   \"title\": \"My First List\",\n   \"content\": \"this is first content of first list\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/lists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "imageuploads",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2NhYzVkNTAwMDliMDBjNDAzNmI4YjMiLCJpYXQiOjE1NTY4MDMxMTR9._wJ5LlslHbDhXxYtCtUIZhS_z9ArVWYNw-tXorHz3Fk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5cd188f6efd4d921d0e97261\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/uploads/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"uploads",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

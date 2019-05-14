@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Role = require('_helpers/role');
+
 
 const schema = new Schema({
     username: { type: String, unique: true, required: true },
     hash: { type: String, required: true },
-    questionsNecessary: { type: String, required: true },
-    interestedRoommate: { type: String, required: true },
-    questions: {
+	questionsNecessary: { type: String, required: false },
+    interestedRoommate: { type: String, required: false },
+	 questions: {
 		
 		LookingRoommate:{
 		 Quiet: { type: String, required: false },
@@ -48,15 +50,40 @@ const schema = new Schema({
 		 PartTime: { type: String, required: false }, 
 		 StudentFullTime: { type: String, required: false },
 		 StudentPartTime: { type: String, required: false }
-		} 
-		
+		},
 		
 		
 		
 	},  
-	  
-    	
 	
+	Images:{
+		
+		
+				ProfileImage:{
+				imageName: { type: String, required: false  },
+				imageData: { type: 'Buffer',
+					 required: false ,
+					 data: [  104, 101, 108, 108, 111, 32, 98, 117, 102, 102, 101, 114  ] 
+
+					}
+
+				},
+				CoverImage:{
+				   imageName: { type: String, required: false  },
+					imageData: { type: 'Buffer',
+					 required: false ,
+					 data: [  101, 114, 32, 101, 111, 117, 98, 104, 109, 108, 107, 108  ] 
+
+					}
+				}
+					
+					  
+	
+	},
+	
+	  DOB: { type: String },	
+	  gender: { type: String },	
+      Role: { type: String, required: true },
      createdDate: { type: Date, default: Date.now }
 });
 

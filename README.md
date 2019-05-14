@@ -18,3 +18,8 @@ module.exports = {
 
 Starting the API locally: 
 Start the API by running npm start from the command line in the project root folder, you should see the message Server listening on port 4000. 
+
+
+Testing API with Postman: 
+You can test the API directly using Postman and import the postman collection from project folder /postman/LocalFlatsApis.postman_collection. 
+For instructions on how to use Postman see the second half of this post.

@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('_helpers/db');
 const User = db.User;
+const Role = require('_helpers/role');
 
 module.exports = {
     authenticate,
@@ -12,16 +13,20 @@ module.exports = {
     update,
 	updateQuestionData,
 	getQuestionDataByUserId,  
-    delete: _delete
+	profileImageData,
+	UserRole, 
+	getAllUserBasedOnRole,
+	delete: _delete
 };
 
 async function authenticate({ username, password }) {
     const user = await User.findOne({ username });
+	//const user = users.find(u => u.username === username && u.password === password);
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
-        const token = jwt.sign({ sub: user.id }, config.secret);
+        const token = jwt.sign({ sub: user.id, role: user.Role }, config.secret);
         return {
-            ...userWithoutHash,
+           
             token
         };
     }
@@ -29,7 +34,12 @@ async function authenticate({ username, password }) {
 
 async function getAll() {
     return await User.find().select('-hash');
+} 
+
+async function getAllUserBasedOnRole(userRole) { 
+    return await User.find({ Role: userRole}).select('-hash');
 }
+ 
 
 async function getById(id) {
     return await User.findById(id).select('-hash');
@@ -64,6 +74,7 @@ async function update(id, userParam) {
     // hash password if it was entered
     if (userParam.password) {
         userParam.hash = bcrypt.hashSync(userParam.password, 10);
+		
     }
 
     // copy userParam properties to user
@@ -71,8 +82,8 @@ async function update(id, userParam) {
 
     await user.save();
 }
-async function updateQuestionData(userParam) {
-    const user = await User.findById(userParam.id);
+async function updateQuestionData(id,userParam) {
+    const user = await User.findById(id);
 
     // validate
     if (!user) throw 'User not found';
@@ -82,9 +93,24 @@ async function updateQuestionData(userParam) {
 
     await user.save();
 }
-async function getQuestionDataByUserId(userParam) {
-    return await User.findById(userParam.id).select('-hash');
+
+
+async function UserRole(id) {
+    return await User.findById(id).select('-hash');
 }
+
+
+async function getQuestionDataByUserId(id) {
+    return await User.findById(id).select('-hash');
+}
+
+//Upload Image
+
+async function profileImageData(id) {
+    return await User.findById(id).select('-hash');
+}
+
+
 async function _delete(id) {
     await User.findByIdAndRemove(id);
 }
