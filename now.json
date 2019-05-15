@@ -13,11 +13,5 @@
         },
         "src": "/.*",
         "dest": "/index.js"
-    }],
-    "env": {
-      "MONGODB_URL": "@mongodb-url",
-      "MONGODB_NAME": "@mongodb-name",
-      "LOG_LEVEL": "@log-level",
-      "NODE_ENV": "@node-env"
-    }
+    }]
 }
