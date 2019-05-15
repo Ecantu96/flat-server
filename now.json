@@ -1,9 +1,9 @@
 
 {
     "version": 2,
-    "name": "arrangespace-server",
+    "name": "flat-server",
     "builds": [
-        { "src": "index.js", "use": "@now/node-server" }
+        { "src": "server.js", "use": "@now/node-server" }
     ],
     "routes": [{
         "headers": {
@@ -12,6 +12,6 @@
             "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
         },
         "src": "/.*",
-        "dest": "/index.js"
+        "dest": "/server.js"
     }]
 }
