@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    const lists = require('../controllers/roomsList.controller.js');
+    const lists = require('../controllers/roomsList.Controller.js');
 
     // Create a new List
     app.post('/roomsList', lists.create);
