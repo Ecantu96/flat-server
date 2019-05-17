@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 app.use('/users', require('./users/users.controller'));
 
 // api agent
-app.use('/agents', require('./agents/agent.controller'));
+//app.use('/agents', require('./agents/agent.controller'));
 
 // Apartments Lists routes
 require('./Listings/routes/apartmentList.routes.js')(app);
