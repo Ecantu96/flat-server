@@ -74,7 +74,7 @@ exports.create = (req, res) => {
         res.send(data);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the List."
+            message: err.message || "Some error occurred while creating the List."    //500 Server Error
         });
     });
 };
@@ -87,8 +87,8 @@ exports.findAll = (req, res) => {
     .then(properties => {
         res.send(properties);
     }).catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving properties."
+        res.status(404).send({       
+            message: err.message || "Properties Not Found"            //404 Not Found Result
         });
     });
 };
@@ -122,7 +122,7 @@ exports.update = (req, res) => {
     // Validate Request
     if(!req.body.propertyAddress) {
         return res.status(400).send({
-            message: "Property Address can not be empty"
+            message: "Property Address can not be empty"       // 400 Bad Request
         });
     }
 

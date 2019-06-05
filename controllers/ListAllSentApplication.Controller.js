@@ -1,7 +1,7 @@
 ﻿const ListSentApplication = require('../models/ListAllSentApplication.model.js');
 const Role = require('../_helpers/role.js');
 
- 
+       
 // Create and Save a new List
 exports.create = (req, res) => {
 	
@@ -33,7 +33,7 @@ exports.create = (req, res) => {
 	 // const ab = FavouriteList.findById(req.body.room_list_id);
 	  
 	if(  listSentApplications.AppliedList_Id == "" ){
-		return res.status(401).json({ message: 'Applied List Id cant empty' });
+		return res.status(400).json({ message: 'Applied List Id cant empty' });   //Bad Request
     }
 	
     listSentApplications.save()
@@ -41,7 +41,7 @@ exports.create = (req, res) => {
         res.send(data);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the List."
+            message: err.message || "Some error occurred while creating the Application."
         });
     });
 };
@@ -60,7 +60,8 @@ exports.accept = (req, res) => {
         return res.status(401).json({ message: 'Unauthorized Agent' });
     }
 	
-    
+   
+	
 	//const Userid = parseInt(req.params.id);
     // Create a List
     const accecptSentApplications = new ListSentApplication({
@@ -76,7 +77,7 @@ exports.accept = (req, res) => {
 	 // const ab = FavouriteList.findById(req.body.room_list_id);
 	  
 	if(  accecptSentApplications.AppliedList_Id == "" ){
-		return res.status(401).json({ message: 'Applied List Id cant empty' });
+		return res.status(400).json({ message: 'Applied List Id cant empty' });
     }
 	
 	
@@ -98,11 +99,14 @@ exports.accept = (req, res) => {
 exports.fetchAllApplicationListbyAgent = (req, res) => {
 	
 	const currentUser = req.user;
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id);   
     // only allow admins to access other user records
     if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
         return res.status(401).json({ message: 'Unauthorized Agent' });
     }
+	
+	 //Applied List
+	//var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
 	
     ListSentApplication.find()
     .then(lists => {
@@ -115,6 +119,57 @@ exports.fetchAllApplicationListbyAgent = (req, res) => {
 };
 
 
+// Retrieve and return all lists from the database.
+exports.fetchAcceptedApplicationListbyAgent = (req, res) => {
+	
+	const currentUser = req.user;
+    const id = parseInt(req.params.id);
+    // only allow admins to access other user records
+    if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
+        return res.status(401).json({ message: 'Unauthorized Agent' });
+    }
+	
+	 //Applied List
+	var applied_list = ListSentApplication.find( { appliedList: "true" } );
+	
+    ListSentApplication.find(applied_list)
+    .then(lists => {
+        res.send(lists);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Accepted Lists."
+        });
+    });
+};
+
+
+
+
+// Retrieve and return all lists from the database.
+exports.fetchDeclienedApplicationListbyAgent = (req, res) => {
+	
+	const currentUser = req.user;
+    const id = parseInt(req.params.id);
+    // only allow admins to access other user records
+    if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
+        return res.status(401).json({ message: 'Unauthorized Agent' });
+    }
+	
+	 //Applied List
+	var decliend_list = ListSentApplication.find( { appliedList: "false" } );
+	
+    ListSentApplication.find(decliend_list)
+    .then(lists => {
+        res.send(lists);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Decliened Lists."
+        });
+    });
+};
+
+
+
 // Retrieve and return all Applicants BY Agent
 exports.ViewAllApplicantByAgent = (req, res) => {
 	
@@ -125,26 +180,62 @@ exports.ViewAllApplicantByAgent = (req, res) => {
         return res.status(401).json({ message: 'Unauthorized Agent' });
     } 
 	
-		//const User_id = req.body;
 		
-		//const User_id = currentUser.User_id;
-		
-		 const User_id = new ListSentApplication({
-                User_id: req.body.User_id,
-		 });
-		
-		
-	  ListSentApplication.find()
-    .then(lists => {
+	 	/* ListSentApplication.distinct( "User_id" )
+		.then(lists => {
         res.send(lists);
-    }).catch(err => {
+		}).catch(err => {
+			res.status(500).send({
+				message: err.message || "Some error occurred while retrieving Favourite Roommate."
+			});
+		}); */
+		
+		var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
+		
+	   ListSentApplication.find(Agent_accept)
+      .then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+       .catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while retrieving Favourite Roommate."
+            message: err.message || "Some error occurred while retrieving Applicants."
         });
-    });
+    });  
 	
 };
 
+
+// Retrieve and return all Applicants BY Agent
+exports.ViewSingleApplicantByAgent = (req, res) => {
+	
+	const currentUser = req.user;
+    const id = parseInt(req.params.id);
+    // only allow admins to access other user records
+   if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
+        return res.status(401).json({ message: 'Unauthorized Agent' });
+    } 
+	
+		
+	 	/* ListSentApplication.distinct( "User_id" )
+		.then(lists => {
+        res.send(lists);
+		}).catch(err => {
+			res.status(500).send({
+				message: err.message || "Some error occurred while retrieving Favourite Roommate."
+			});
+		}); */
+		
+	   var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
+		
+	   ListSentApplication.findOne(Agent_accept)
+      .then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+       .catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Applicant."
+        });
+    });  
+	
+};
+
+ 
 
 
 

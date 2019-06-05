@@ -10,8 +10,17 @@ module.exports = (app) => {
     // Retrieve all list applications
     app.get('/listApplicationByAgent', lists.fetchAllApplicationListbyAgent);
 	
+	//Retrieve All accepted Applications
+    app.get('/acceptedAgentApplications', lists.fetchAcceptedApplicationListbyAgent);
+	
+		//Retrieve All Declined Applications
+    app.get('/declinedAgentApplications', lists.fetchDeclienedApplicationListbyAgent);
+	
 	 // View All Apllicant By Agent
       app.get('/viewAllApplicant', lists.ViewAllApplicantByAgent);
+	  
+	   // View All Apllicant By Agent
+      app.get('/viewSingleApplicant', lists.ViewSingleApplicantByAgent);
 
     // Retrieve a single List with noteId
       app.get('/listApplication/:listId', lists.findOne);

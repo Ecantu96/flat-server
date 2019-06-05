@@ -16,6 +16,7 @@ router.get('/questions', getUserAllQuestions);
 router.get('/uploads', profileImageData);
 router.get('/fetchAllUsersDetails', getAllUserDetails);
 router.get('/matchRoommates', matchRoommates);
+router.get('/bestMatchs', bestMatchs);
 router.get('/viewRoommateProfile/:id', fetchRoommateById);
 router.get('/fetchAllAgentDetails', getAllAgentDetails);
 router.get('/agentsViewbyuser', agentsViewbyUser);
@@ -23,32 +24,33 @@ router.get('/current', getCurrentUserDetails);
 router.get('/userRole', userRole);
 router.get('/agentRole', AgentRole);
 router.get('/:id', getUserById);
-router.put('/:id', update);
+router.put('/update', update);
 router.delete('/:id', _delete);
 
 module.exports = router;
 
 function authenticate(req, res, next) {
-    userService.authenticate(req.body)
-        .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+	const user = req.user;
+      userService.authenticate(req.body)
+	    .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))   //400 Bad Request
         .catch(err => next(err));
 }
 
 function register(req, res, next) {
     userService.create(req.body)
-        .then(() => res.json({ message: 'User Registered successfully' }))
+        .then(() => res.status(201).json({ message: 'User Registered successfully' }))       // 201 User Created
         .catch(err => next(err));
 }
 
 function getCurrentUserDetails(req, res, next) {
     userService.getById(req.user.sub)
-        .then(user => user ? res.json(user) : res.sendStatus(404))
+        .then(user => user ? res.json(user) : res.sendStatus(404))   //404 Not Found
         .catch(err => next(err));
 }
 
 //UserRole Details
 function userRole(req, res, next) {	 
-        return res.status(200).json({ role: req.user.role, id: req.user.sub });
+        return res.status(200).json({ role: req.user.role, id: req.user.sub });      //200 Ok
 }
 //AgentRole Details
 function AgentRole(req, res, next) {	
@@ -59,11 +61,11 @@ function AgentRole(req, res, next) {
 	//const agentId = agentId.id;
      
 	  if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
-        return res.status(401).json({ message: 'Unauthorized Agent' });
+        return res.status(401).json({ message: 'Unauthorized Agent' });       //401 Unauthorized
     }
      //const agent="Agent";
 	 const role_name="Agent";
-     return res.status(200).json({ role: req.user.role.role_name, id: req.user.sub });
+     return res.status(200).json({ role: req.user.role.role_name, id: req.user.sub });     // 200 Ok
 	 
 	  
 	 
@@ -72,104 +74,115 @@ function AgentRole(req, res, next) {
 
 function getUserAllQuestions(req, res, next) {
     userService.getQuestionDataByUserId(req.user.sub)
-        .then(user => user ? res.json(user.questions) : res.sendStatus(404))
+        .then(user => user ? res.json(user.questions) : res.sendStatus(404).json({ message: 'Not Found' }) )
         .catch(err => next(err));
 }
 
-var getBalance = function(accountId) {
-   
-}
 
 
 function matchRoommates(req, res, next) {
     
-    /** db.users.aggregate(
-    [ { $match : { questions : questions } } ]
-	); ****/
-	/*
-	db.User.aggregate(
-		[ { $match : { Role : "Admin" } } ]
-	, function (err, result) {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        console.log(result);
-    });
-	*/
+   
 	 const id = parseInt(req.params.id);
 	 
 	  const currentUser = req.user;
 	  
-	  //console.log(currentUser);
 	  
-	  
-	   		// const LookingRoommate = new User({
-       // LookingRoommate: req.body.LookingRoommate
-       
-   // });
-	 	 	  
-	  //var LookingRoommate =  User.questions.LookingRoommate ;
-	  
-	  //console.log(LookingRoommate);
-	 	   
-	 // var LookingInRoommates =  User.questions.LookingInRoommates;
-	  
-	 // var typeofperson = User.questions.typeofperson ;
 	 
-	 
+	   if (id !== currentUser.sub && currentUser.role !== Role.User) {
+        return res.status(401).json({ message: 'Unauthorized User' });
+		
+        } 
+	// var qlist = db.User.find(   { questions: "LookingRoommate" }, { $type: "questionsNecessary" }, { $type: "interestedRoommate" } );
+			//console.log(qlist);		
+	var qlist = db.User.find( { 'questions.LookingRoommate': "Quiet" } );
+	/* var qlist = db.User.find({"questions.LookingRoommate": "Quiet"}) */
+	
+	/* db.User.find({"questions": "questions"} )
+      .then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+       .catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Match Roommate."
+        });
+    });   */
+	//console.log(qlist);
 	//var rules = [{ LookingRoommate: currentUser.questions.LookingRoommate }, { LookingInRoommates: currentUser.questions.LookingInRoommates }, { typeofperson: currentUser.questions.typeofperson }];
 	
-	var rules = [{ 'questions.LookingRoommate': "Tidy" }];
-	
+	 var rules = [{ 'question': currentUser.qlist } ];
 	//var rules = [{'questions.LookingRoommate.Loud': "true"}, { Role : "User" }];
-	
-	var MatchRoommates = db.User.aggregate(
-	    // [ { $match : { $and: rules } } ]
-		//[ { $match : { Role : "User" }  } ]
-		  [ { $match : {$and: rules }  } ]
-	   //  [ { $group : { questions : rules } } ]
-		//[  { $group : { _id : id, questions: { $push: "$$ROOT" } } } ]
-		//[   { $group: { _id: "$item", mergedSales: { $mergeObjects: "$questions" } } }	]
-			
-		
-	, function (err, result) {
-        if (err) { 
-           res.status(500).send({
-            message: err.message || "Some error occurred while retrieving Matching User List."
-        });
-        }
-		res.status(200).send(result);
+		var MatchRoommates = db.User.aggregate(
+	   
+		  [ { $match : {$and: rules }  } ]	, function (err, result) {
+			  
+				if (err) { 
+				   res.status(400).send({
+					message: err.message || "Some error occurred while retrieving Matching User List."
+				});
+			}
+			//200 result Ok
+		  res.status(200).send(result);
         
-    });
- 
-					/*{ $match: {
-						questions:{
-						LookingRoommate: "false1111111"	
-						}
-					}*/
-  
-   
-   
-   
-  /*  User.find(req.user.sub)
-        .then(user => user ? res.json(user) : res.sendStatus(404))
-        .catch(err => next(err)); */
-		
+    });  
+ 			
 
 }
 
+function bestMatchs(req, res, next) {
+    
+   
+	 const id = parseInt(req.params.id);
+	 
+	  const currentUser = req.user;
+	  
+	  
+	 
+	 /*   if (id !== currentUser.sub && currentUser.role !== Role.User) {
+        return res.status(401).json({ message: 'Unauthorized User' });
+		
+    }  */
+
+    function bestMatch(params,cb){
+			User.findOne(params,function(err,questions){
+				if (err || !questions){
+				   var keys = Object.keys(params);
+				   if (keys.length){
+					   delete params[keys.pop()];
+					   bestMatch(params,cb);
+				   }else{
+					   cb('No matches',null);
+				   }
+				}else{
+					cb(null,questions);
+				}
+			});
+		}
+
+		bestMatch({'LookingRoommate':'Quiet','LookingInRoommates':'Quiet','typeofperson':'Quiet', 'LookingRoommate':'Loud','LookingInRoommates':'Loud','typeofperson':'Loud', 'LookingRoommate':'Tidy','LookingInRoommates':'Tidy','typeofperson':'Tidy', 'LookingRoommate':'Messy','LookingInRoommates':'Messy','typeofperson':'Messy'},function(err,questions){
+		   // console.log(err,questions);
+			if (err) { 
+						   res.status(400).send({
+							message: err.message || "Some error occurred while retrieving Matching User List."
+						});
+					}
+					//200 result Ok
+				  res.status(200).send(questions);
+			
+		});
+
+}
 
 function profileImageData(req, res, next) {
     userService.profileImageData(req.user.sub)
-        .then(user => user ? res.json(user.Images) : res.sendStatus(404))
+        .then(user => user ? res.json(user.Images) : res.sendStatus(102))    
         .catch(err => next(err));
 }
   
   
 function update(req, res, next) {
+	
+	
     userService.update(req.user.sub, req.body)
-        .then(() => res.json({ message: "User Updated successfully" }))
+      .then(() => res.status(200).json({ message: 'User Updated successfully' }))   
         .catch(err => next(err));
 }
 
@@ -188,7 +201,7 @@ function _delete(req, res, next) {
     } */
 	
     userService.delete(req.params.id)
-        .then(() => res.json({ message: "User Deleted successfully" }))
+        .then(() =>  res.status(410).json({ message: "User Deleted successfully" }))    //410 Gone Result
         .catch(err => next(err));
 }
 
@@ -198,9 +211,9 @@ function getUserById(req, res, next) {
     const currentUser = req.user;
     const id = parseInt(req.params.id);
     // only allow admins to access other user records
-    if (id !== currentUser.sub && currentUser.role !== Role.Admin) {
+    /* if (id !== currentUser.sub && currentUser.role !== Role.Admin) {
         return res.status(401).json({ message: 'Unauthorized Admin' });
-    }
+    } */
 
     userService.getById(req.params.id)
         .then(user => user ? res.json(user) : res.sendStatus(404))
@@ -216,10 +229,9 @@ function fetchRoommateById(req, res, next) {
     }
 
     userService.getById(req.params.id) 
-        .then(user => user ? res.json(user) : res.sendStatus(404))
+        .then(user => user ? res.json(user) : res.sendStatus(404))   //404 No Found Result
         .catch(err => next(err));
 }
-
 
 function getAllUserDetails(req, res, next) {
 	const currentUser = req.user;
@@ -241,7 +253,7 @@ function getAllAgentDetails(req, res, next) {
    
     // only allow admins to access other user records
 	  if ( currentUser.role !== Role.Admin) {
-        return res.status(402).json({ message: 'Unauthorized Admin' });
+        return res.status(401).json({ message: 'Unauthorized Admin' });
     } 
 	const role_name="Agent";
     userService.getAllUserBasedOnRole(role_name)
@@ -257,7 +269,7 @@ function agentsViewbyUser(req, res, next) {
    
     // only allow admins to access other user records
 	  if ( currentUser.role !== Role.User) {
-        return res.status(402).json({ message: 'Unauthorized User' });
+        return res.status(401).json({ message: 'Unauthorized User' });
     } 
 	const role_name="Agent";
     userService.getAllUserBasedOnRole(role_name)
