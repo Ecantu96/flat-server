@@ -1,11 +1,14 @@
 module.exports = (app) => {
-    const lists = require('../controllers/roomsList.Controller.js');
+    const lists = require('../../controllers/roomsList.Controller.js');
 
     // Create a new List
     app.post('/roomsList', lists.create);
 
     // Retrieve all List
     app.get('/roomsList', lists.findAll);
+	
+	 // Retrieve all List By User
+    app.get('/findAllRoomsByUser', lists.findAllByUser);
 
     // Retrieve a single List with noteId
     app.get('/roomsList/:listId', lists.findOne);

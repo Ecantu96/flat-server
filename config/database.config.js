@@ -1,3 +1,4 @@
 module.exports = {
-    url: 'mongodb://localhost:/node-mongo-registration-login-api'
+    url: 'mongodb://localhost/node-mongo-registration-login-api'
 }
+

@@ -9,14 +9,7 @@
 			"name": "UserRegsiter",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q5MjJmODM2ZWQ3NzI1Mjg4YzBiYWYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc4Mzc5NzJ9.yG2eoaQeN41D3AbLRlW7YVzw3q0ub4ZRl9S8ekdAFH8",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "POST",
 				"header": [
@@ -29,10 +22,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"nadeem1@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  },\n  \n  \"Role\": \"Admin\"\n  \n  \n}"
+					"raw": "{\n\n  \"username\": \"sachdeva1267@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"Role\": \"Agent\",\n  \"DOB\": \"01-05-1990\",\n  \"gender\": \"male\"\n  \n}"
 				},
 				"url": {
-					"raw": "http://localhost:4000/users/register/",
+					"raw": "http://localhost:4000/users/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,8 +33,7 @@
 					"port": "4000",
 					"path": [
 						"users",
-						"register",
-						""
+						"register"
 					]
 				}
 			},
@@ -64,7 +56,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"nadeem@gmail.com\",\n\t\"password\": \"123456\"\n}"
+					"raw": "{\n\t\"username\": \"kunal4sd@gmail.com\",\n\t\"password\": \"123456\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/users/authenticate",
@@ -92,7 +84,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzcxMDl9.CmxF4w381Rd-JDXECDOXOLcpIYpY64Drf5Ltw0ZMYU0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RiYjZiYmM5YjBhZDE3YzAxMWRlZjQiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc5MDMwNzh9.-8my38CLRYgqBgpAaS8d17XrLFHH0rt_ZCz-b0aJl_s",
 							"type": "string"
 						}
 					]
@@ -136,7 +128,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NDYwMzN9.vYH-bWFXZgmjo4u5Bj2KWHskB5J3sX7xN3VVOtIAY6w",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RiYjZiYmM5YjBhZDE3YzAxMWRlZjQiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc5MDMwNzh9.-8my38CLRYgqBgpAaS8d17XrLFHH0rt_ZCz-b0aJl_s",
 							"type": "string"
 						}
 					]
@@ -166,14 +158,7 @@
 			"name": "UserUpdate",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzcxMDl9.CmxF4w381Rd-JDXECDOXOLcpIYpY64Drf5Ltw0ZMYU0",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "PUT",
 				"header": [
@@ -186,10 +171,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n \"username\": \"kunal7861@gmail.com\",\n  \"password\": \"123456\"\n}"
+					"raw": "{\n \"username\": \"kunal786@gmail.com\",\n  \"password\": \"123456\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:4000/users/5ccc471041c5871d34d26cf4",
+					"raw": "http://localhost:4000/users/5cd922f836ed7725288c0baf",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -197,7 +182,7 @@
 					"port": "4000",
 					"path": [
 						"users",
-						"5ccc471041c5871d34d26cf4"
+						"5cd922f836ed7725288c0baf"
 					]
 				}
 			},
@@ -233,7 +218,7 @@
 					"raw": "{\n\t\"id\": \"5ccac5d50009b00c4036b8b3\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:4000/users/questions/",
+					"raw": "http://localhost:4000/users/questions",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -241,8 +226,7 @@
 					"port": "4000",
 					"path": [
 						"users",
-						"questions",
-						""
+						"questions"
 					]
 				}
 			},
@@ -301,7 +285,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q5NDZhMWEzNzVhZDJlYTA3NGFhZjMiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc4MzcyMTF9.vB6N98RggM2P6en4gNpQAGRCnzeEYnbwkRo5oCSuaAA",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q5MjJmODM2ZWQ3NzI1Mjg4YzBiYWYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc4Mzc5NzJ9.yG2eoaQeN41D3AbLRlW7YVzw3q0ub4ZRl9S8ekdAFH8",
 							"type": "string"
 						}
 					]
@@ -469,7 +453,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2ODE2NDY0MzE0MDE1ZGNlYzlmZGEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc1NjI3MTJ9.p-ov-fl8pQ26JJ1Vm-fdZO8JpZLWSeQFkdH5qHZTPz8",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RiYjZiYmM5YjBhZDE3YzAxMWRlZjQiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTc5MjQzMTl9.M6ra1eBRfg_SQ4THihGtsk5vTHsBgI5Ts73mZJPnTkA",
 							"type": "string"
 						}
 					]
@@ -503,7 +487,7 @@
 			"response": []
 		},
 		{
-			"name": "AgentUpdate Copy",
+			"name": "AgentUpdate",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -579,7 +563,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"sidak@gmail.com\",\n  \"password\": \"123456\",\n   \"Role\": \"Agent\"  ,   \n    \"Images\":{\n  \t\t\t \"ProfileImage\":{\n  \t\t\t\t \"imageName\": \"This is image updated for Sidak Agent\",\n\t\t\t\t  \"imageData\": \"This is image Data updated for Sidak Agent\"\n  \t\t\t},\n  \t\t\t\n  \t\t\t\"CoverImage\":{\n\t\t\t\t  \"imageName\": \"This is image Name\",\n\t\t\t\t  \"imageData\": \"This is image Data\"\n  \t\t\t}\n  }\n  \t  \n  \t  \n  \n}"
+					"raw": "{\n\n  \"username\": \"sachdeva@gmail.com\",\n  \"password\": \"123456\",\n   \"Role\": \"Agent\"  ,   \n    \"Images\":{\n  \t\t\t \"ProfileImage\":{\n  \t\t\t\t \"imageName\": \"This is image updated for fdfdfsachdeva Agent\",\n\t\t\t\t  \"imageData\": \"This is image Data updated for sachdeva Agent\"\n  \t\t\t},\n  \t\t\t\n  \t\t\t\"CoverImage\":{\n\t\t\t\t  \"imageName\": \"This is image Name\",\n\t\t\t\t  \"imageData\": \"This is image Data\"\n  \t\t\t}\n  }\n  \t  \n  \t  \n  \n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/users/5cd68d0c068f4400a062005b",
@@ -597,7 +581,7 @@
 			"response": []
 		},
 		{
-			"name": "CreateRoomsAgentList",
+			"name": "CreateRoomsByAgent",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -637,7 +621,7 @@
 			"response": []
 		},
 		{
-			"name": "RetriveRoomsAgentList",
+			"name": "AgentRetriveRooms",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -680,7 +664,7 @@
 			"response": []
 		},
 		{
-			"name": "RetriveSingleRoomAgentList",
+			"name": "AgentRetriveSingleRoom",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -724,7 +708,7 @@
 			"response": []
 		},
 		{
-			"name": "UpdateRoomAgentList",
+			"name": "AgentUpdateRoom",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -765,7 +749,7 @@
 			"response": []
 		},
 		{
-			"name": "DeleteRoomAgentList",
+			"name": "AgentDeleteRoom",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -806,7 +790,7 @@
 			"response": []
 		},
 		{
-			"name": "CreateAparmentAgentList",
+			"name": "AgentCreateAparment",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -847,7 +831,7 @@
 			"response": []
 		},
 		{
-			"name": "RetriveAparmentAgentList",
+			"name": "AgentRetriveAparment",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -891,7 +875,51 @@
 			"response": []
 		},
 		{
-			"name": "RetriveSingleAparmentAgentList",
+			"name": "CountListByAgent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/CountListAgent/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"CountListAgent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveSingleAparment",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -935,7 +963,7 @@
 			"response": []
 		},
 		{
-			"name": "DeleteAparmentAgentList",
+			"name": "AgentDeleteAparment",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -976,7 +1004,7 @@
 			"response": []
 		},
 		{
-			"name": "UpdateAparmentAgentList",
+			"name": "AgentUpdateAparmentDetails",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -1147,7 +1175,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2NhYzVkNTAwMDliMDBjNDAzNmI4YjMiLCJpYXQiOjE1NTY4MDMxMTR9._wJ5LlslHbDhXxYtCtUIZhS_z9ArVWYNw-tXorHz3Fk",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzVkODEyMTE2NjI4YzQ0ZTJhMWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc5MDMxMzZ9.xL7MBBC9TRpVPY5vIZEKHxZiZTwlYSrExAV21olB3MU",
 							"type": "string"
 						}
 					]
