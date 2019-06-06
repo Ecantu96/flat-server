@@ -5,8 +5,12 @@ module.exports = (app) => {
     app.post('/favouriteRoomate', lists.create);
 	
 	
-    // Retrieve all favourite Roomate
+    // Retrieve all favourite marked Roommate
     app.get('/fetchAllRoommateByuser', lists.fetchAllRoommateByuser);
+	
+	
+	   // Retrieve all favourite Unmarked Roommate
+    app.get('/fetchUnMarkfavouriteRoommate', lists.fetchAllUnMarkRoommate);
 	
 	//match Roommates By User
     app.get('/matchUsers', lists.matchUsers);

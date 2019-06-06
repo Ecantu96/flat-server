@@ -11,7 +11,7 @@ exports.create = (req, res) => {
     const id = parseInt(req.params.id);
     // only allow admins to access other user records
     if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
-        return res.status(401).json({ message: 'Unauthorized Agent' });
+        return res.status(401).json({ message: 'Unauthorized Agent' }); //401 Unauthorized
     }
 	
     if(!req.body.title ) {
@@ -53,7 +53,7 @@ exports.findAll = (req, res) => {
         res.send(lists);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while retrieving lists."
+            message: err.message || "Apartment Not Found"
         });
     });
 };
@@ -100,14 +100,14 @@ exports.update = (req, res) => {
     }, {new: true})
     .then(apartmentList => {
         if(!apartmentList) {
-            return res.status(404).send({
+            return res.status(400).send({
                 message: "List not found with id " + req.params.listId
             });
         }
         res.send(apartmentList);
     }).catch(err => {
         if(err.kind === 'ObjectId') {
-            return res.status(404).send({
+            return res.status(400).send({
                 message: "List not found with id " + req.params.listId
             });                
         }
@@ -124,14 +124,14 @@ exports.delete = (req, res) => {
     ApartmentList.findByIdAndRemove(req.params.listId)
     .then(apartmentList => {
         if(!apartmentList) {
-            return res.status(404).send({
+            return res.status(400).send({
                 message: "ApartmentList not found with id " + req.params.listId
             });
         }
         res.send({message: "ApartmentList deleted successfully!"});
     }).catch(err => {
         if(err.kind === 'ObjectId' || err.name === 'NotFound') {
-            return res.status(404).send({
+            return res.status(400).send({
                 message: "ApartmentList not found with id " + req.params.listId
             });                
         }
