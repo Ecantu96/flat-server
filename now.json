@@ -1,7 +1,6 @@
-
 {
     "version": 2,
-    "name": "flat-server",
+    "name": "nooklyn-flats-backend-apis",
     "builds": [
         { "src": "server.js", "use": "@now/node-server" }
     ],

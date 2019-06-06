@@ -25,12 +25,9 @@ exports.findAll = (req, res) => {
 
     res.send(listMap);  
 	
-	
   }); 
   
-  //return ab;
-  
-	
+
 };
 
 

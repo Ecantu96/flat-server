@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const listSentApplication = new Schema({
 	
-		appliedList: { type: String, required: false },
+		appliedList: { type: Boolean, required: false },
 		
 		AppliedList_Id: { type: String, required: true },
 					
@@ -14,7 +14,7 @@ const listSentApplication = new Schema({
 		
 		Agent_Accept: { type: Boolean, required: false },
 										
-      createdDate: { type: Date, default: Date.now }
+        createdDate: { type: Date, default: Date.now }
 
 });
 

@@ -2,7 +2,7 @@ module.exports = (app) => {
     const lists = require('../../controllers/apartmentList.Controller.js');
 
     // Create a new List
-    app.post('/aparmentList', lists.create);
+    app.post('/createAparmentList', lists.create);
 
     // Retrieve all List
     app.get('/aparmentList', lists.findAll);

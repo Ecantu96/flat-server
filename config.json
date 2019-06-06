@@ -1,5 +1,5 @@
 {
-    "connectionString": "mongodb+srv://nooklyn-flats-backend-apis:123321nk@cluster0-6mbxf.mongodb.net/nooklyn-flats-backend-apis?retryWrites=true",
-    "secret": "ZbvwxSMaoA4cs9nExmaauwEn0YG"    
-}
-   
+    "connectionString": "mongodb+srv://nooklyn-flats-backend-apis:gNZSs83j7E2eAH3C@cluster0-6mbxf.mongodb.net/test?retryWrites=true&w=majority",
+    "secret": "9s83109d2+583493192"                   
+}        
+

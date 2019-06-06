@@ -11,7 +11,7 @@ const PropertySchema = new Schema({
 		
 		propertyType: { 
 						apprtment: { type: Boolean },
-						rooms: { type: Boolean }
+	    					rooms: { type: Boolean }
 		              },
 		roomForRent: { type: Boolean, required: true, default: null },
 		
