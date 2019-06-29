@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'mongodb+srv://nooklyn-flats-backend-apis:gNZSs83j7E2eAH3C@cluster0-6mbxf.mongodb.net/test?retryWrites=true&w=majority'
+    url: 'mongodb+srv://flatapinooklyn:clepr@123321@cluster0-lq8s3.mongodb.net/test?retryWrites=true&w=majority'
 }
 
    

@@ -13,6 +13,7 @@ router.post('/authenticate', authenticate);
 router.post('/register', register);
 router.put('/questions', updateUserQuestions);
 router.get('/questions', getUserAllQuestions);
+router.get('/profile', roommateProfile);
 router.get('/uploads', profileImageData);
 router.get('/fetchAllUsersDetails', getAllUserDetails);
 router.get('/matchRoommates', matchRoommates);
@@ -22,7 +23,7 @@ router.get('/fetchAllAgentDetails', getAllAgentDetails);
 router.get('/agentsViewbyuser', agentsViewbyUser);
 router.get('/current', getCurrentUserDetails);
 router.get('/userRole', userRole);
-router.get('/agentRole', AgentRole);
+router.get('/agentRoleId', AgentRole);
 router.get('/:id', getUserById);
 router.put('/update', update);
 router.delete('/:id', _delete);
@@ -57,7 +58,7 @@ function AgentRole(req, res, next) {
 
   const currentUser = req.user;
     const id = parseInt(req.params.id); 
-	
+	  
 	//const agentId = agentId.id;
      
 	  if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
@@ -96,16 +97,7 @@ function matchRoommates(req, res, next) {
 	// var qlist = db.User.find(   { questions: "LookingRoommate" }, { $type: "questionsNecessary" }, { $type: "interestedRoommate" } );
 			//console.log(qlist);		
 	var qlist = db.User.find( { 'questions.LookingRoommate': "Quiet" } );
-	/* var qlist = db.User.find({"questions.LookingRoommate": "Quiet"}) */
 	
-	/* db.User.find({"questions": "questions"} )
-      .then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
-       .catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving Match Roommate."
-        });
-    });   */
-	//console.log(qlist);
 	//var rules = [{ LookingRoommate: currentUser.questions.LookingRoommate }, { LookingInRoommates: currentUser.questions.LookingInRoommates }, { typeofperson: currentUser.questions.typeofperson }];
 	
 	 var rules = [{ 'question': currentUser.qlist } ];
@@ -188,7 +180,7 @@ function update(req, res, next) {
 
 function updateUserQuestions(req, res, next) {
     userService.updateQuestionData(req.user.sub,req.body)
-        .then(() => res.json({}))
+        .then(() => res.json({ message: 'Questions Updated successfully' }))
         .catch(err => next(err));
 
 }
@@ -201,7 +193,7 @@ function _delete(req, res, next) {
     } */
 	
     userService.delete(req.params.id)
-        .then(() =>  res.status(410).json({ message: "User Deleted successfully" }))    //410 Gone Result
+        .then(() =>  res.status(200).json({ message: "User Deleted successfully" }))    //ok Result
         .catch(err => next(err));
 }
 
@@ -280,6 +272,22 @@ function agentsViewbyUser(req, res, next) {
     
 } 
 
+
+function roommateProfile(req, res, next) {
+	
+	const currentUser = req.user;
+   
+    // only allow admins to access other user records
+	  if ( currentUser.role !== Role.User) {
+        return res.status(401).json({ message: 'Unauthorized User' });
+    } 
+	userService.getById(req.user.sub)
+          .then(users => res.json(users))
+		// .then(user => user ? res.json(user.role) : res.sendStatus(404))
+        .catch(err => next(err));
+		
+    
+} 
 
 /* function getById(req, res, next) {
     userService.getById(req.user.sub)
