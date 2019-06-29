@@ -181,15 +181,7 @@ exports.ViewAllApplicantByAgent = (req, res) => {
     } 
 	
 		
-	 	/* ListSentApplication.distinct( "User_id" )
-		.then(lists => {
-        res.send(lists);
-		}).catch(err => {
-			res.status(500).send({
-				message: err.message || "Some error occurred while retrieving Favourite Roommate."
-			});
-		}); */
-		
+	 			
 		var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
 		
 	   ListSentApplication.find(Agent_accept)
@@ -203,7 +195,7 @@ exports.ViewAllApplicantByAgent = (req, res) => {
 };
 
 
-// Retrieve and return all Applicants BY Agent
+// Retrieve and return all Applicants By Agent
 exports.ViewSingleApplicantByAgent = (req, res) => {
 	
 	const currentUser = req.user;
@@ -233,6 +225,39 @@ exports.ViewSingleApplicantByAgent = (req, res) => {
         });
     });  
 	
+};
+
+
+// People who also interested List
+exports.alsoInterstedinList = (req, res) => {
+	
+	const currentUser = req.user;
+    const id = parseInt(req.params.id);
+    // only allow admins to access other user records
+   if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
+        return res.status(401).json({ message: 'Unauthorized Agent' });
+    } 
+	
+					
+			ListSentApplication.aggregate([
+			 
+						 { $group: { 
+				_id: { AppliedList_Id: "$AppliedList_Id", value: "$value" },
+				count: { $sum:  1 },
+				 User_id: { $push: "$User_id" }
+			}},
+			{ $match: {
+				count: { $gt : 1 }
+			}}
+			]).then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+			   .catch(err => {
+				res.status(500).send({
+					message: err.message || "Some error occurred while retrieving Applicants."
+				});
+			}); 
+		
+			   			
+			
 };
 
  

@@ -43,7 +43,7 @@ require('./api/routes/ListAllApplication.routes.js')(app);
 require('./api/routes/roomsList.routes.js')(app);
 
 // Configuring the database
-const dbConfig = require('./config/database.config.js');
+//const dbConfig = require('./config/database.config.js');
 
 
 
@@ -58,17 +58,17 @@ const server = app.listen(port, function () {
 
 
 //const dbConfig = require('./config.json');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
 
 
 // Connecting to the database
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+//mongoose.connect(dbConfig.url, {
+   // useNewUrlParser: true
+//}).then(() => {
+  //  console.log("Successfully connected to the database");    
+//}).catch(err => {
+  //  console.log('Could not connect to the database. Exiting now...', err);
+   // process.exit();
+//});
