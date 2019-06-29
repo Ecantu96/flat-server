@@ -19,10 +19,16 @@ module.exports = (app) => {
 	 // View All Apllicant By Agent
       app.get('/viewAllApplicant', lists.ViewAllApplicantByAgent);
 	  
+	  
 	   // View All Apllicant By Agent
       app.get('/viewSingleApplicant', lists.ViewSingleApplicantByAgent);
+	  
+	  
+	// People who also interested List
+    app.get('/alsoInterstedInList', lists.alsoInterstedinList);
+	  
 
-    // Retrieve a single List with noteId
+    // Retrieve a single List with noteId 
       app.get('/listApplication/:listId', lists.findOne);
 
     // Update a List with noteId
