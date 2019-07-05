@@ -1,0 +1,3215 @@
+{
+	"info": {
+		"_postman_id": "e9a7d721-e158-4d11-a155-687a24a53208",
+		"name": "LocalFlatsApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserRegsiter",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"anuj121254@gmail.com\",\n\t\"password\": \"\",\n    \"questions\": {\n        \"DoYouDrink\": \"true\",\n        \"DoYouSmoke\": \"false\",\n        \"LikeGoOut\": \"false\",\n        \"LookingRoommate\": \"Loud\",\n        \"LookingInRoommates\": \"Quiet\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    },\n    \"Images\": {\n        \"ProfileImage\": {\n            \"imageName\": \"ProfileImage for Anuj 122\",\n            \"imageData\": \"Profile Image Data\"\n        },\n        \"CoverImage\": {\n            \"imageName\": \"CoverImage for Anuj 123\",\n            \"imageData\": \"Cover Image Data\"\n        }\n    },\n    \n    \"DOB\": \"01-05-1990\",\n    \"gender\": \"male\",\n    \"Role\": \"User\"\n   \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/register",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"register"
+					]
+				},
+				"description": "User, Admin and Agent can register here"
+			},
+			"response": []
+		},
+		{
+			"name": "UserLoginAndAgentGetToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"arvinder@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/authenticate",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"authenticate"
+					]
+				},
+				"description": "User, agent and admin can login here through Token authentication"
+			},
+			"response": []
+		},
+		{
+			"name": "UserLoginAndAgentGetToken Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"anuj@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/authenticate",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"authenticate"
+					]
+				},
+				"description": "User, agent and admin can login here through Token authentication"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUserDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/current",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"current"
+					]
+				},
+				"description": "View User details or profile"
+			},
+			"response": []
+		},
+		{
+			"name": "ProfileView",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/5d15b96eb7011500d0dc581b",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"5d15b96eb7011500d0dc581b"
+					]
+				},
+				"description": "View User details or profile"
+			},
+			"response": []
+		},
+		{
+			"name": "RoommateProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"profile"
+					]
+				},
+				"description": "View User details or profile"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUserRole",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/userRole",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"userRole"
+					]
+				},
+				"description": "This is used only to know What is role of user."
+			},
+			"response": []
+		},
+		{
+			"name": "User/AgentProfileUpdate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjhkZmI3MDExNTAwZDBkYzU4MTkiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NjE3MDQ2ODV9.m2W2wERGcYZxbjxHl0QVhlvAnE0ooMbY9kZi0nG9Q9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"nadeem@gmail.com\",\n  \"password\": \"123456\",\n  \"Role\": \"Admin\"\n   \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/update",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"update"
+					]
+				},
+				"description": "Update the Users profile"
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserQuestions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjhkZmI3MDExNTAwZDBkYzU4MTkiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NjE3MDQ2ODV9.m2W2wERGcYZxbjxHl0QVhlvAnE0ooMbY9kZi0nG9Q9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5ccac5d50009b00c4036b8b3\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/questions",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"questions"
+					]
+				},
+				"description": "View User's Questions details"
+			},
+			"response": []
+		},
+		{
+			"name": "UserUpdateQuestions  ---- By User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"questions\": {\n        \"DoYouDrink\": true,\n        \"DoYouSmoke\": true,\n        \"LikeGoOut\": true,\n        \"LookingRoommate\": \"Loud\",\n        \"LookingInRoommates\": \"Quiet\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    }\n   \n   }"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/questions",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"questions"
+					]
+				},
+				"description": "Update questions details by User"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewRoommateProfile-By User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/viewRoommateProfile/5d15b96eb7011500d0dc581b",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"viewRoommateProfile",
+						"5d15b96eb7011500d0dc581b"
+					]
+				},
+				"description": "View Roommate Profile"
+			},
+			"response": []
+		},
+		{
+			"name": "RoommateProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"profile"
+					]
+				},
+				"description": "View Roommate Profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Mark/UnmarkFavouriteRoommate-By-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"favouriteRoommate\": \"false\",\n   \"Userid\": \"12f45dsfs24578dfghjk\",\n  \"favouriteRoommate_id\": \"1234s56564dfdfdddfj14256gj\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/favouriteRoomate",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"favouriteRoomate"
+					]
+				},
+				"description": "Mark Favourite Roomate By User"
+			},
+			"response": []
+		},
+		{
+			"name": "searchResultCreate-by-Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"price\": \"250\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchResultCreate",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"searchResultCreate"
+					]
+				},
+				"description": "Saerch filter Working is in progress"
+			},
+			"response": []
+		},
+		{
+			"name": "FindSearchResult-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2Mjc2MTcwNiwiaWF0IjoxNTYyMTU2OTA2fQ.XGupZrUh9dirDL06cNltqRzw78Trcqy4CL0n3qxoeGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"rentPrice\": \"50\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchResult",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"searchResult"
+					]
+				},
+				"description": "Saerch filter Working is in progress"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchFavouriteRoommates ---by User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchAllRoommateByuser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"fetchAllRoommateByuser"
+					]
+				},
+				"description": "View All Favourite Roommates List By User"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchUnFavouriteRoommates ---by User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchUnMarkfavouriteRoommate",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"fetchUnMarkfavouriteRoommate"
+					]
+				},
+				"description": "View All Favourite Roommates List By User"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewAgentsProfile -By--User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee03355a-3c67-47a0-91b8-4f8ae2021660",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/agentsViewbyuser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"agentsViewbyuser"
+					]
+				},
+				"description": "View Agent Profile By User"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveRoomsList By-- User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/findAllRoomsByUser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"findAllRoomsByUser"
+					]
+				},
+				"description": "View All Agent RoomList by User"
+			},
+			"response": []
+		},
+		{
+			"name": "Mark/UnmarkFavouriteAgentRoomList-By--User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"favourite\": \"true\"\t,\n  \"room_list_id\": \"123214xxcx5678fgh9cxcv2sffvasa\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/markFavouriteByUser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"markFavouriteByUser"
+					]
+				},
+				"description": "Mark/Unmark Favourite Agent Room List By User. This is based on true or false through favourite element"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchFavouriteAgentRoomList   By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchallFavListByUser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"fetchallFavListByUser"
+					]
+				},
+				"description": "Fetch Favourite Agent List By -User"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchUnmarkFavouriteAgentRoomList   By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchallUnFavListByUser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"fetchallUnFavListByUser"
+					]
+				},
+				"description": "Fetch UnFavourite Agent list By User"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchFavouriteRoomListBy-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchallFavListByAgent",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"fetchallFavListByAgent"
+					]
+				},
+				"description": "Retrieve Favourite List of users By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchSingelFavouriteAgent--By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchallFavList/5ce24a1ce353a9191013564a",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"fetchallFavList",
+						"5ce24a1ce353a9191013564a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitPropertyApplicationToAgent-By-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appliedList\": \"true\",\n  \"AppliedList_Id\": \"123d2fdfdddfd451d25\",\n  \"User_id\": \"123456ssd5d641dd42d563\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/listApplication",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"listApplication"
+					]
+				},
+				"description": "Submit Property Application to agent By User"
+			},
+			"response": []
+		},
+		{
+			"name": "markApplicantFavouriteProperty-By-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MjEzMjIwM30.9etC7bcmq4Tnee9uppIPYpZ6jUoKatZb0XbL58sDiho",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"favMark\": \"true\",\n  \"Userid\": \"1245153c5a2b8cf\",\n  \"propertyList_id\": \"1a2w514r6t254h2kf\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/markFavouriteApplicant",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"markFavouriteApplicant"
+					]
+				},
+				"description": "Mark Favourite Property By Applicant"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewAllMarkFavApplicants--By- Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIxMzIyMjF9.kykHPA94hoSicC0ayRcguS83yPaDEVZTK0QGVCkhXeA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/allMarkApplicants",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"allMarkApplicants"
+					]
+				},
+				"description": "View All mark Applicants who mark the property"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewallUnmarkFavApplicants--By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIxMzIyMjF9.kykHPA94hoSicC0ayRcguS83yPaDEVZTK0QGVCkhXeA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/allUnmarkFav",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"allUnmarkFav"
+					]
+				},
+				"description": "View All Unmark Applicants who Unmarked the property"
+			},
+			"response": []
+		},
+		{
+			"name": "viewSingleMarkFavApplicant-By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/viewFavMarkApplicant/5d1c4b51d2888c1844b2525c",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"viewFavMarkApplicant",
+						"5d1c4b51d2888c1844b2525c"
+					]
+				},
+				"description": "View Single mark Applicant who mark the property"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchListApplicationToUser-By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"ListTitle\": \"Arvinder\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchTitleList",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"searchTitleList"
+					]
+				},
+				"description": "Search Applications based on Title(name)"
+			},
+			"response": [
+				{
+					"name": "SearchListApplicationTouser-By-Agent",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchTitle",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							 
+							"path": [
+								"searchTitle"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-FS3OHp8hLiJMyAJ64/jsaGQDHvU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jun 2019 07:46:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"5d146f73fb69fd241c20155c\",\n        \"appliedList\": true,\n        \"AppliedList_Id\": \"123d2fdfded451d25\",\n        \"ListTitle\": \"Anuj\",\n        \"User_id\": \"123456sd641edd42d563\",\n        \"currentUser\": \"5ce68c528ea32b09c0354f9e\",\n        \"createdDate\": \"2019-06-27T07:25:39.450Z\",\n        \"__v\": 0,\n        \"id\": \"5d146f73fb69fd241c20155c\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "ListApplicationAccept/Decline-By-Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"AppliedList_Id\": \"1232ssfdsfdfd45\",\n  \"User_id\": \"123456ssds5ds64s\",\n  \"Agent_Accept\": \"false\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/applicationAccept",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"applicationAccept"
+					]
+				},
+				"description": "List Application Accept or decline By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAllListApplication-By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/listApplicationByAgent",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"listApplicationByAgent"
+					]
+				},
+				"description": "Fetch All Applications By Agent, which created by Users"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAcceptedApplications-By- Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/acceptedAgentApplications",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"acceptedAgentApplications"
+					]
+				},
+				"description": "Fetch All accepted Applications By Agent, which created by Users"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchDeclinedApplications-By- Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/declinedAgentApplications",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"declinedAgentApplications"
+					]
+				},
+				"description": "Fetch All Declined Applications By Agent, which created by Users"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchSingleListApplicationByID--Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/listApplication/5cf50c0af18d111c246fadd5",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"listApplication",
+						"5cf50c0af18d111c246fadd5"
+					]
+				},
+				"description": "Retrive A single Application List By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewAllApplicantProfile-By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIwNDk1NDF9.ZVLDaP07ra0gwvo9OLGznfgRHkYSPsrkJm1Nh0yqrfk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/viewAllApplicant",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"viewAllApplicant"
+					]
+				},
+				"description": "View Applicant By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewSingleApplicantProfile-By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIwNDk1NDF9.ZVLDaP07ra0gwvo9OLGznfgRHkYSPsrkJm1Nh0yqrfk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/viewSingleApplicant",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"viewSingleApplicant"
+					]
+				},
+				"description": "View Applicant By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "ViewalsoInterstedInList-By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/alsoInterstedinList",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"alsoInterstedinList"
+					]
+				},
+				"description": "People who also interested List based on matched Id's"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateListApplication--By User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appliedList\": \"true\",\n  \"AppliedList_Id\": \"1232fdfdfd45\",\n  \"User_id\": \"123456ssd564\"\n}\n\n  "
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/listApplication/5cf50c0af18d111c246fadd5",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"listApplication",
+						"5cf50c0af18d111c246fadd5"
+					]
+				},
+				"description": "Update Application List By User"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveRoomsListings--By User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/findAllRoomsByUser",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"findAllRoomsByUser"
+					]
+				},
+				"description": "Retrieve RoomList to User Which created By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAllUsersDetails--By-Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGE4NjIzMTE3ODJjMTA4NWJmMzEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTg2MTI2MjN9.EZNRB0N-hjKPuol3yWo3TxlDazkPdZFMdPpi4QMsIgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/fetchAllUsersDetails",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"fetchAllUsersDetails"
+					]
+				},
+				"description": "View All Users By Admin"
+			},
+			"response": []
+		},
+		{
+			"name": "MatchRoommates--By-  User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/matchRoommates",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"matchRoommates"
+					]
+				},
+				"description": "MatchRoommates Details to show new Users, It's in pending to testing"
+			},
+			"response": []
+		},
+		{
+			"name": "bestMatchs--By-  User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/bestMatchs",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"bestMatchs"
+					]
+				},
+				"description": "MatchRoommates Details to show new Users, It's in pending to testing "
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAllAgentsDetails - admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee03355a-3c67-47a0-91b8-4f8ae2021660",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGE4NjIzMTE3ODJjMTA4NWJmMzEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTg2MTI2MjN9.EZNRB0N-hjKPuol3yWo3TxlDazkPdZFMdPpi4QMsIgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/fetchAllAgentDetails",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"fetchAllAgentDetails"
+					]
+				},
+				"description": "View All Agents to admin"
+			},
+			"response": []
+		},
+		{
+			"name": "UserAndAgentDelete - By -Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGE4NjIzMTE3ODJjMTA4NWJmMzEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTg2MTI2MjN9.EZNRB0N-hjKPuol3yWo3TxlDazkPdZFMdPpi4QMsIgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/5cd922f836ed7725288c0baf",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"5cd922f836ed7725288c0baf"
+					]
+				},
+				"description": "Admin can delete agents and users"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRegister",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"chin_agent_profile@gmail.com\",\n     \"password\": \"xswfre$23\",\n    \"DOB\": \"01-05-1990\",\n    \"gender\": \"male\",\n    \"Role\": \"Agent\",\n    \"Images\": {\n        \"ProfileImage\": {\n            \"imageName\": \"ProfileImage for agent 122\",\n            \"imageData\": \"Image Data\"\n        },\n        \"CoverImage\": {\n            \"imageName\": \"CoverImage for Agent123\",\n            \"imageData\": \"Image Data\"\n        }\n    }\n     \n   \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/register",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentLoginAndGetToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"chin_agent_profile@gmail.com\",\n\t\"password\": \"xswfre$23\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/authenticate",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"authenticate"
+					]
+				},
+				"description": "Agent Login "
+			},
+			"response": []
+		},
+		{
+			"name": "AgentUpdateProfile--By Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTk1NDIzNzN9.j7PNtUUmKDhnrOlAMzsd1jnysMRBfZhVgsnbA6lXKPc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"sidak@gmail.com\",\n  \"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/update",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"update"
+					]
+				},
+				"description": "Update agent profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent/UserProfileDetails --By User or Agent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee03355a-3c67-47a0-91b8-4f8ae2021660",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"sidak@gmail.com\",\n  \"password\": \"123456\",\n   \"Role\": \"Agent\"  ,   \n    \"Images\":{\n  \t\t\t \"ProfileImage\":{\n  \t\t\t\t \"imageName\": \"This is image updated for fdfdfSidak Agent\",\n\t\t\t\t  \"imageData\": \"This is image Data updated for Sidak Agent\"\n  \t\t\t},\n  \t\t\t\n  \t\t\t\"CoverImage\":{\n\t\t\t\t  \"imageName\": \"This is image Name\",\n\t\t\t\t  \"imageData\": \"This is image Data\"\n  \t\t\t}\n  }\n  \t  \n  \t  \n  \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/current",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"current"
+					]
+				},
+				"description": "Agent or User can view own profile Details"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent/UserProfileDetails----By Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee03355a-3c67-47a0-91b8-4f8ae2021660",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGE4NjIzMTE3ODJjMTA4NWJmMzEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTk1NDY1NDV9.FQ4zD1kSQQ7Lv4-0QzAWfTxV3QjFA9e5AFLHil1T9jg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/5ce68bc88ea32b09c0354f9c",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"5ce68bc88ea32b09c0354f9c"
+					]
+				},
+				"description": "Admin can view users/Agent details through id"
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePropertyByAgent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\r\n        \"propertyAddress\": \"property Address\",\r\n\t\t\r\n\t\t\"unitNumber\": \"123456789\",\r\n\t\t\r\n\t\t \"propertyType\": { \r\n\t\t\t\t\t\t\"apprtment\": \"false\",\r\n\t\t\t\t\t\t \"rooms\": \"true\"\r\n\t\t              },\r\n\t\t \"roomForRent\": \"true\",\r\n\t\t\r\n\t\t \"rentPrice\":  \"50\",\r\n\t\t\r\n\t\t \"securityDeposit\": \"securityDeposit\",\r\n\t\t\r\n\t      \"Beds\":  \"Beds\",\r\n\t\t\r\n\t\t   \"Baths\":  \"Baths\",\r\n\t\t\r\n\t       \"squareFeet\": \"squareFeet\",\r\n\t\t\r\n\t\t   \"leaseDuration\":  \"leaseDuration\",\r\n\t\t\r\n\t\t   \"dateAvailable\": \"01-05-1990\",\r\n\t\t\r\n\t        \"leaseTerms\": \"leaseTerms\",\r\n\t\t\r\n\t\t    \"Description\":  \"Description\",\r\n\t\t\r\n\t\t   \"HidePropertyAddress\": \"false\",\r\n\t\t\r\n\t\t   \"Name\": \"Name\",\r\n\t\t\r\n\t\t   \"Email\":  \"sidak1@gmail.com\",\r\n\t\t\r\n\t\t  \"Phone\": \"123456789\",\r\n\t\t\r\n\t\t   \"propertyOwner\": \"true\",\r\n\t\t\r\n\t\t  \"managementCompanyBroker\": \"false\",\r\n\t\t\r\n\t\t   \"Tenant\": \"false\",\r\n\t\t\r\n\t\t \"HidePhoneOnListing\": \"true\",\r\n\t\t\r\n\t\t  \"AC\":\"true\",\r\n\t\t\r\n\t\t \"BalconyDeck\": \"false\",\r\n\t\t\r\n\t\t \"Furnished\": \"true\",\r\n\t\t\r\n\t\t \"HardwoodFloor\": \"false\",\r\n\t\t\r\n\t     \"wheelchairAccess\": \"true\",\r\n\t\t\r\n\t\t \"GarageParking\": \"true\",\r\n\t\t\r\n\t\t \"OffStreetParking\": \"false\",\r\n\t\t\r\n\t\t \"None\": \"true\",\r\n\t\t\r\n\t\t \"InUnit\": \"false\",\r\n\t\t\r\n\t\t \"SharedInBuilding\": \"false\",\r\n\t\t\r\n\t\t \"NoPetsAllowed\":\"true\",\r\n\t\t\r\n\t     \"Catsok\": \"true\", \r\n\t\t\r\n\t\t \"SmallDogsOk\":\"true\",\r\n\t\t\r\n\t\t \"LargeDogsOk\":\"true\",\r\n\t\t\r\n\t     \"PhotosAndMedia\":{ \r\n\t\t\t\t\t\t\t\"path\":  \"http://google.com\",\r\n\t\t\t\t\t\t\t\"caption\":\"This is the caption\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\r\n\t\t\"ProvideGeneralAvailabilityByDay\": \"true\",\r\n\t\t\r\n\t\t\"AllowRentalApplications\": \"true\"\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"property"
+					]
+				},
+				"description": "Submit Property By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveAllProperties --By Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"property"
+					]
+				},
+				"description": "View All Properties details By agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveSingleProperty",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTk1NDU0NTF9.YyKnOHcdPC2oIkVm5nefWRZJtURmJ7yx8MUsq5XlaCg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\r\n        \"propertyAddress\": \"property Address\",\r\n\t\t\r\n\t\t\"unitNumber\": \"123456789\",\r\n\t\t\r\n\t\t \"propertyType\": { \r\n\t\t\t\t\t\t\"apprtment\": \"false\",\r\n\t\t\t\t\t\t \"rooms\": \"true\"\r\n\t\t              },\r\n\t\t \"roomForRent\": \"true\",\r\n\t\t\r\n\t\t \"rentPrice\":  \"50\",\r\n\t\t\r\n\t\t \"securityDeposit\": \"securityDeposit\",\r\n\t\t\r\n\t      \"Beds\":  \"Beds\",\r\n\t\t\r\n\t\t   \"Baths\":  \"Baths\",\r\n\t\t\r\n\t       \"squareFeet\": \"squareFeet\",\r\n\t\t\r\n\t\t   \"leaseDuration\":  \"leaseDuration\",\r\n\t\t\r\n\t\t   \"dateAvailable\": \"01-05-1990\",\r\n\t\t\r\n\t        \"leaseTerms\": \"leaseTerms\",\r\n\t\t\r\n\t\t    \"Description\":  \"Description\",\r\n\t\t\r\n\t\t   \"HidePropertyAddress\": \"false\",\r\n\t\t\r\n\t\t   \"Name\": \"Name\",\r\n\t\t\r\n\t\t   \"Email\":  \"Email\",\r\n\t\t\r\n\t\t  \"Phone\": \"123456789\",\r\n\t\t\r\n\t\t   \"propertyOwner\": \"true\",\r\n\t\t\r\n\t\t  \"managementCompanyBroker\": \"false\",\r\n\t\t\r\n\t\t   \"Tenant\": \"false\",\r\n\t\t\r\n\t\t \"HidePhoneOnListing\": \"true\",\r\n\t\t\r\n\t\t  \"AC\":\"true\",\r\n\t\t\r\n\t\t \"BalconyDeck\": \"false\",\r\n\t\t\r\n\t\t \"Furnished\": \"true\",\r\n\t\t\r\n\t\t \"HardwoodFloor\": \"false\",\r\n\t\t\r\n\t     \"wheelchairAccess\": \"true\",\r\n\t\t\r\n\t\t \"GarageParking\": \"true\",\r\n\t\t\r\n\t\t \"OffStreetParking\": \"false\",\r\n\t\t\r\n\t\t \"None\": \"true\",\r\n\t\t\r\n\t\t \"InUnit\": \"false\",\r\n\t\t\r\n\t\t \"SharedInBuilding\": \"SharedInBuilding\",\r\n\t\t\r\n\t\t \"NoPetsAllowed\":\"NoPetsAllowed\",\r\n\t\t\r\n\t     \"Catsok\": \"Catsok\", \r\n\t\t\r\n\t\t \"SmallDogsOk\":\"SmallDogsOk\",\r\n\t\t\r\n\t\t \"LargeDogsOk\":\"LargeDogsOk\",\r\n\t\t\r\n\t     \"PhotosAndMedia\":{ \r\n\t\t\t\t\t\t\t\"path\":  \"http://google.com\",\r\n\t\t\t\t\t\t\t\"caption\":\"This is the caption\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\r\n\t\t\"ProvideGeneralAvailabilityByDay\": \"true\",\r\n\t\t\r\n\t\t\"AllowRentalApplications\": \"false\"\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property/5ce3eb3f02aebc283c99a995",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"property",
+						"5ce3eb3f02aebc283c99a995"
+					]
+				},
+				"description": "View Single Property details by Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentDeleteProperty",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property/5cde8742d8ffe0209c19dd75",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"property",
+						"5cde8742d8ffe0209c19dd75"
+					]
+				},
+				"description": "Agent can delete own property"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentUpdateProperty",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\r\n        \"propertyAddress\": \"property Address\",\r\n\t\t\r\n\t\t\"unitNumber\": \"123456789\",\r\n\t\t\r\n\t\t \"propertyType\": { \r\n\t\t\t\t\t\t\"apprtment\": \"false\",\r\n\t\t\t\t\t\t \"rooms\": \"true\"\r\n\t\t              },\r\n\t\t \"roomForRent\": \"true\",\r\n\t\t\r\n\t\t \"rentPrice\":  \"50\",\r\n\t\t\r\n\t\t \"securityDeposit\": \"securityDeposit\",\r\n\t\t\r\n\t      \"Beds\":  \"Beds\",\r\n\t\t\r\n\t\t   \"Baths\":  \"Baths\",\r\n\t\t\r\n\t       \"squareFeet\": \"squareFeet\",\r\n\t\t\r\n\t\t   \"leaseDuration\":  \"leaseDuration\",\r\n\t\t\r\n\t\t   \"dateAvailable\": \"01-05-1990\",\r\n\t\t\r\n\t        \"leaseTerms\": \"leaseTerms\",\r\n\t\t\r\n\t\t    \"Description\":  \"Description\",\r\n\t\t\r\n\t\t   \"HidePropertyAddress\": \"false\",\r\n\t\t\r\n\t\t   \"Name\": \"Name\",\r\n\t\t\r\n\t\t   \"Email\":  \"sidak1@gmail.com\",\r\n\t\t\r\n\t\t  \"Phone\": \"123456789\",\r\n\t\t\r\n\t\t   \"propertyOwner\": \"true\",\r\n\t\t\r\n\t\t  \"managementCompanyBroker\": \"false\",\r\n\t\t\r\n\t\t   \"Tenant\": \"false\",\r\n\t\t\r\n\t\t \"HidePhoneOnListing\": \"true\",\r\n\t\t\r\n\t\t  \"AC\":\"true\",\r\n\t\t\r\n\t\t \"BalconyDeck\": \"false\",\r\n\t\t\r\n\t\t \"Furnished\": \"true\",\r\n\t\t\r\n\t\t \"HardwoodFloor\": \"false\",\r\n\t\t\r\n\t     \"wheelchairAccess\": \"true\",\r\n\t\t\r\n\t\t \"GarageParking\": \"true\",\r\n\t\t\r\n\t\t \"OffStreetParking\": \"false\",\r\n\t\t\r\n\t\t \"None\": \"true\",\r\n\t\t\r\n\t\t \"InUnit\": \"false\",\r\n\t\t\r\n\t\t \"SharedInBuilding\": \"true\",\r\n\t\t\r\n\t\t \"NoPetsAllowed\":\"true\",\r\n\t\t\r\n\t     \"Catsok\": \"false\", \r\n\t\t\r\n\t\t \"SmallDogsOk\":\"true\",\r\n\t\t\r\n\t\t \"LargeDogsOk\":\"false\",\r\n\t\t\r\n\t     \"PhotosAndMedia\":{ \r\n\t\t\t\t\t\t\t\"path\":  \"http://google.com\",\r\n\t\t\t\t\t\t\t\"caption\":\"This is the caption\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\r\n\t\t\"ProvideGeneralAvailabilityByDay\": \"true\",\r\n\t\t\r\n\t\t\"AllowRentalApplications\": \"false\"\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property/5ce3eb3f02aebc283c99a995",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"property",
+						"5ce3eb3f02aebc283c99a995"
+					]
+				},
+				"description": "Update property by agent"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRoomsList-By-Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the my room  List  title\",\t\n\t\"description\": \"This is the fdfdlist description\",\n\t\"address\": \"This is the Listfdfd Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Imageffd Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"roomsList"
+					]
+				},
+				"description": "Agent can create Room list"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveRoomsList By--Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"roomsList"
+					]
+				},
+				"description": "View Room list By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveSingleRoom By-Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList/5cda9d92a3369510d4d62bcd",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"roomsList",
+						"5cda9d92a3369510d4d62bcd"
+					]
+				},
+				"description": "Retrieve Room  By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentUpdateRoom By-Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the Room List titles\",\t\n\t\"description\": \"This is the Room List description\",\n\t\"address\": \"This is the Room list Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Room Name\",\n\t\t\"imageData\": \"Room Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList/5cda9ca0a3369510d4d62bc7",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"roomsList",
+						"5cda9ca0a3369510d4d62bc7"
+					]
+				},
+				"description": "Update Room Details By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentDeleteRoom By - Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzcwZDEyMTE2NjI4YzQ0ZTJhMWUiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc4MzEyMDd9.AboKPyy58Vr01d8_aqp6TfmKZ5pRl7lqfpitucfpjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList/5cda9d92a3369510d4d62bcd",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"roomsList",
+						"5cda9d92a3369510d4d62bcd"
+					]
+				},
+				"description": "Delete Room from list By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAppartmentList--By Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is title\",\t\n\t\"description\": \"This is the list description\",\n\t\"address\": \"This is the List Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Image Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/createAparmentList",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"createAparmentList"
+					]
+				},
+				"description": "Create Appartment --By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveAparmentList By- Agent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"aparmentList",
+						""
+					]
+				},
+				"description": "View Aprtments by Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveAppartmentListCount--Agent Dashbaord",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDFjNTEzNWFiN2MxMzFhMTQ0ZjQ3YTYiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIxMzY4OTN9.FPI7YD2KB5CbucoPxGZt5CPIEeu0u4RjRjOYOv1qDBA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aprtmentListCount",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"aprtmentListCount"
+					]
+				},
+				"description": "Appartment Counts By agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveRoomListCount--Agent Dashboard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDFjNTEzNWFiN2MxMzFhMTQ0ZjQ3YTYiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIxMzY4OTN9.FPI7YD2KB5CbucoPxGZt5CPIEeu0u4RjRjOYOv1qDBA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/findAllRoomCount",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"findAllRoomCount"
+					]
+				},
+				"description": "This is used by Devloper for now This is in Pending to testing for agent"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveApplicationCount--Agent Dashboard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/CountApplications",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"CountApplications"
+					]
+				},
+				"description": "View Applications count to used Agent Dashboard"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentRetriveSingleAparment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTg3NzIwNjV9.-rlimSKCaKzgCUOBOIayCziI4zm8PcdNVrYknf3eP14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96a71cb6f2e2f0016e8d1",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"aparmentList",
+						"5cd96a71cb6f2e2f0016e8d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentDeleteAparment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96b177b3e3a086c7cded1",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"aparmentList",
+						"5cd96b177b3e3a086c7cded1"
+					]
+				},
+				"description": "AGent can delete Apartment"
+			},
+			"response": []
+		},
+		{
+			"name": "AgentUpdateAparmentDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Q2OGQwYzA2OGY0NDAwYTA2MjAwNWIiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc3NTQ5ODF9.vASGfD0K8rlRyPHW5S-CPIbrNIKorpl7JWeXPj3q7-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"This is the Updated title\",\t\n\t\"description\": \"This is the list description\",\n\t\"address\": \"This is the List Adress\",\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Image Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t}\n\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96a71cb6f2e2f0016e8d1",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"aparmentList",
+						"5cd96a71cb6f2e2f0016e8d1"
+					]
+				},
+				"description": "Update the Aprtment Details by Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentAgentRoleId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/agentRoleId",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"agentRoleId"
+					]
+				},
+				"description": "Get Agent Id By Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "imageuploads",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RhNzVkODEyMTE2NjI4YzQ0ZTJhMWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NTc5MDMxMzZ9.xL7MBBC9TRpVPY5vIZEKHxZiZTwlYSrExAV21olB3MU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/uploads/",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"users",
+						"uploads",
+						""
+					]
+				},
+				"description": "This is not in use for Now"
+			},
+			"response": []
+		}
+	]
+}

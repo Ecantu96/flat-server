@@ -57,7 +57,7 @@ require('./api/routes/favouriteApplicant.route.js')(app);
 require('./api/routes/filter.routes.js')(app);
 
 // Configuring the database
-//const dbConfig = require('./config/database.config.js');
+const dbConfig = require('./config/database.config.js');
 
 
 
@@ -72,7 +72,7 @@ const server = app.listen(port, function () {
 
 
 //const dbConfig = require('./config.json');
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;    
 
