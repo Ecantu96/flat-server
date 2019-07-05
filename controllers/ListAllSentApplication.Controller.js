@@ -14,12 +14,13 @@ exports.create = (req, res) => {
         return res.status(401).json({ message: 'Unauthorized User' });
     }
 	
-    
+     
 	//const Userid = parseInt(req.params.id);
     // Create a List
     const listSentApplications = new ListSentApplication({
         appliedList: req.body.appliedList,
         AppliedList_Id: req.body.AppliedList_Id,
+        ListTitle: req.body.ListTitle,
         User_id: req.body.User_id,
 		currentUser: req.user.sub
 				
@@ -66,6 +67,7 @@ exports.accept = (req, res) => {
     // Create a List
     const accecptSentApplications = new ListSentApplication({
         AppliedList_Id: req.body.AppliedList_Id,
+         ListTitle: req.body.ListTitle,
         User_id: req.body.User_id,
 		currentUser: req.user.sub,
 		Agent_Accept: req.body.Agent_Accept
@@ -179,21 +181,11 @@ exports.ViewAllApplicantByAgent = (req, res) => {
    if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
         return res.status(401).json({ message: 'Unauthorized Agent' });
     } 
-	
-		
-	 	/* ListSentApplication.distinct( "User_id" )
-		.then(lists => {
-        res.send(lists);
-		}).catch(err => {
-			res.status(500).send({
-				message: err.message || "Some error occurred while retrieving Favourite Roommate."
-			});
-		}); */
-		
-		var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
-		
-	   ListSentApplication.find(Agent_accept)
-      .then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+				
+		//var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
+		var User_id = req.body.User_id;
+	   ListSentApplication.find(User_id)
+      .then(list => list ? res.send( list ) : res.sendStatus(404).json({ message: 'Not Found' }) )
        .catch(err => {
         res.status(500).send({
             message: err.message || "Some error occurred while retrieving Applicants."
@@ -203,7 +195,7 @@ exports.ViewAllApplicantByAgent = (req, res) => {
 };
 
 
-// Retrieve and return all Applicants BY Agent
+// Retrieve and return all Applicants By Agent
 exports.ViewSingleApplicantByAgent = (req, res) => {
 	
 	const currentUser = req.user;
@@ -212,27 +204,52 @@ exports.ViewSingleApplicantByAgent = (req, res) => {
    if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
         return res.status(401).json({ message: 'Unauthorized Agent' });
     } 
-	
+    
+    
+		 		
+	   //var User_id = ListSentApplication.find( { User_id } );
 		
-	 	/* ListSentApplication.distinct( "User_id" )
-		.then(lists => {
-        res.send(lists);
-		}).catch(err => {
-			res.status(500).send({
-				message: err.message || "Some error occurred while retrieving Favourite Roommate."
-			});
-		}); */
-		
-	   var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
-		
-	   ListSentApplication.findOne(Agent_accept)
-      .then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+	   ListSentApplication.findOne({ User_id : req.params.User_id })
+      .then(list => list ? res.send( { User_id : list.User_id } ) : res.sendStatus(404).json({ message: 'Not Found' }) )
        .catch(err => {
         res.status(500).send({
             message: err.message || "Some error occurred while retrieving Applicant."
         });
     });  
 	
+};
+
+
+// People who also interested List
+exports.alsoInterstedinList = (req, res) => {
+	
+	const currentUser = req.user;
+    const id = parseInt(req.params.id);
+    // only allow admins to access other user records
+   if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
+        return res.status(401).json({ message: 'Unauthorized Agent' });
+    } 
+	
+					
+			ListSentApplication.aggregate([
+			 
+						 { $group: { 
+				_id: { AppliedList_Id: "$AppliedList_Id", value: "$value" },
+				count: { $sum:  1 },
+				 User_id: { $push: "$User_id" }
+			}},
+			{ $match: {
+				count: { $gt : 1 }
+			}}
+			]).then(list => list ? res.send(list) : res.sendStatus(404).json({ message: 'Not Found' }) )
+			   .catch(err => {
+				res.status(500).send({
+					message: err.message || "Some error occurred while retrieving Applicants."
+				});
+			}); 
+		
+			   			
+			
 };
 
  
@@ -288,6 +305,7 @@ exports.update = (req, res) => {
     ListSentApplication.findByIdAndUpdate(req.params.listId, {
        appliedList: req.body.appliedList,
         AppliedList_Id: req.body.AppliedList_Id,
+		 ListTitle: req.body.ListTitle,
         User_id: req.body.User_id,
     }, {new: true})
     .then(listSentApplications => {
@@ -310,6 +328,51 @@ exports.update = (req, res) => {
 };
 
 
+exports.searchByname = (req, res) =>{
+	
+	const currentUser = req.user;
+    const id = parseInt(req.params.id);   
+    // only allow Agent to access other user records
+    if (id !== currentUser.sub && currentUser.role !== Role.Agent) {
+        return res.status(401).json({ message: 'Unauthorized Agent' });
+    }
+	//Applied List
+	//var Agent_accept = ListSentApplication.find( { Agent_Accept: "true" } );
+	
+		var query =  { ListTitle: /^i/ }
+		
+		  // var applied_list = ListSentApplication.find( { appliedList: "true" } );
+			
+		if (req.body.ListTitle ) {
+			query.ListTitle = req.body.ListTitle;
+			
+		}
+		
+				    
+			  ListSentApplication.find(query, function(err, lists){
+				//ListSentApplication.find(query, { projection: { applied_list: true } }, function(err, lists) {
+				if (err){
+					return res.status(404).json({ message: 'Not found the result' });
+				}
+				//console.log(docs);
+				
+				res.send(lists);
+				
+			}); 
+	 	
+         
+	
+		 /* ListSentApplication.find(query)
+		.then(lists => {
+			 res.send(lists);
+		}).catch(err => {
+			res.status(404).send({
+				message: err.message || "Not Found the Result"
+			});
+		}); */
+
+	
+};
 
 
 
