@@ -33,7 +33,15 @@ module.exports = router;
 function authenticate(req, res, next) {
 	const user = req.user;
       userService.authenticate(req.body)
-	    .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))   //400 Bad Request
+	    .then(user => {
+		if(user){ 
+		         return res.json(user) 
+			 } else{
+				 return res.status(400).json({ message: 'Username or password is incorrect' }) 
+				 
+				} 
+		}) 
+         //400 Bad Request
         .catch(err => next(err));
 }
 
@@ -42,6 +50,7 @@ function register(req, res, next) {
         .then(() => res.status(201).json({ message: 'User Registered successfully' }))       // 201 User Created
         .catch(err => next(err));
 }
+
 
 function getCurrentUserDetails(req, res, next) {
     userService.getById(req.user.sub)
@@ -289,9 +298,4 @@ function roommateProfile(req, res, next) {
     
 } 
 
-/* function getById(req, res, next) {
-    userService.getById(req.user.sub)
-        .then(user => user ? res.json(user) : res.sendStatus(404))
-        .catch(err => next(err));
-}
- */
+
