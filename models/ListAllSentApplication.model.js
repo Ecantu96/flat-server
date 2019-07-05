@@ -6,13 +6,17 @@ const listSentApplication = new Schema({
 	
 		appliedList: { type: Boolean, required: false },
 		
-		AppliedList_Id: { type: String, required: true },
-					
-		User_id: { type:String, required: true },
+		AppliedList_Id: { type: String, required: true,  unique: true },
 		
-		currentUser: { type:String, required: false },
+		ListTitle: { type: String, required: true  },
+					
+		User_id: { type:String, required: true,  unique: true },
+		
+		agentId: { type:String, required: false },
 		
 		Agent_Accept: { type: Boolean, required: false },
+
+		Favourite_List: { type: Boolean, required: false },
 										
         createdDate: { type: Date, default: Date.now }
 
