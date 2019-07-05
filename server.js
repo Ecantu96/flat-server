@@ -10,6 +10,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());    
 
+session = require('express-session');
+app.use(session({
+    secret: '9s83109d3+583493190',
+    resave: true,
+    saveUninitialized: true
+}));
+
 // use JWT auth to secure the api
 app.use(jwt());    
                             
@@ -42,6 +49,13 @@ require('./api/routes/ListAllApplication.routes.js')(app);
 // Rooms Lists routes
 require('./api/routes/roomsList.routes.js')(app);
 
+
+// Favourite Applicants for property
+require('./api/routes/favouriteApplicant.route.js')(app);
+
+// Search Result for property
+require('./api/routes/filter.routes.js')(app);
+
 // Configuring the database
 //const dbConfig = require('./config/database.config.js');
 
@@ -60,15 +74,15 @@ const server = app.listen(port, function () {
 //const dbConfig = require('./config.json');
 //const mongoose = require('mongoose');
 
-//mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;    
 
 
 // Connecting to the database
-//mongoose.connect(dbConfig.url, {
-   // useNewUrlParser: true
-//}).then(() => {
-  //  console.log("Successfully connected to the database");    
-//}).catch(err => {
-  //  console.log('Could not connect to the database. Exiting now...', err);
-   // process.exit();
-//});
+mongoose.connect(dbConfig.url, {
+useNewUrlParser: true
+}).then(() => {
+ console.log("Successfully connected to the database");    
+}).catch(err => {
+ console.log('Could not connect to the database. Exiting now...', err);
+ process.exit();
+});

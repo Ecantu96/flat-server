@@ -23,14 +23,16 @@ async function authenticate({ username, password }) {
     const user = await User.findOne({ username });
 	//const user = users.find(u => u.username === username && u.password === password);
 	
-	  if (!user) throw 400  + '" Please enter the username and password "';
+	  if (!user) throw 400  + '" Please enter the correct username and password "';
 	  
+	  var expiry = new Date();
+      expiry.setDate(expiry.getDate() + 7);
 	   
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
-        const token = jwt.sign({ sub: user.id, role: user.Role }, config.secret);
+        const token = jwt.sign({ sub: user.id, role: user.Role, exp: parseInt(expiry.getTime() / 1000) }, config.secret);
         return {
-           
+		   username,
             token
         };
     }
