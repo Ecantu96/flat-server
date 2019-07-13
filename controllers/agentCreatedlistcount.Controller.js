@@ -19,7 +19,7 @@ exports.findAll = (req, res) => {
     var listMap = {};
     var count = 1;
     lists.forEach(function(list, count) {
-      listMap[count+1] = list._id;
+      listMap[count] = count+1;
 	   
 	 count++
 	});
@@ -39,7 +39,7 @@ exports.countApplications = (req, res) => {
     var listMap = {};
     var count = 1;
     lists.forEach(function(list, count) {
-      listMap[count+1] = list._id;
+      listMap[count] = count+1;
 	   
 	 count++
 	});
@@ -62,7 +62,7 @@ exports.findAllRoomCount = (req, res) => {
     var listMap = {};
     var count = 1;
     lists.forEach(function(list, count) {
-      listMap[count+1] = list._id;
+      listMap[count] = count+1;
 	   
 	 count++
 	});

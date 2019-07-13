@@ -10,12 +10,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());    
 
-session = require('express-session');
-app.use(session({
-    secret: '9s83109d3+583493190',
-    resave: true,
-    saveUninitialized: true
-}));
 
 // use JWT auth to secure the api
 app.use(jwt());    
@@ -55,6 +49,9 @@ require('./api/routes/favouriteApplicant.route.js')(app);
 
 // Search Result for property
 require('./api/routes/filter.routes.js')(app);
+
+// Neighbourhood List
+require('./api/routes/neighbourhood.routes.js')(app);
 
 // Configuring the database
 const dbConfig = require('./config/database.config.js');

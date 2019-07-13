@@ -6,6 +6,9 @@ module.exports = (app) => {
 
     // Retrieve all List
     app.get('/aparmentList', lists.findAll);
+	
+	//View Fav apartment list by Roommate
+    app.get('/find-fav-apartment', lists.findFavlist);
 
     // Retrieve a single List with noteId
     app.get('/aparmentList/:listId', lists.findOne);
