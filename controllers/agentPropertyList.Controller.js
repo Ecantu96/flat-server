@@ -94,6 +94,66 @@ exports.findAll = (req, res) => {
 };
 
 
+// Retrieve and return all properties from the database.
+exports.findPropertyLanding = (req, res) => {
+	
+	
+	//var Name = Property.findOne( { Name: { $exists: true } } )
+	
+    Property.find({}, function(err, result) {
+		if(!err){
+			   
+         return res.json(result)	
+		}
+		else{
+			return res.status(404).send({
+                message: "Property List is not found"
+            });
+		}
+	});
+   
+};
+
+// Retrieve and return all properties with few amenities from the database.
+exports.findPropertyFewLanding = (req, res) => {
+	
+	
+	//var Name = Property.findOne( { Name: { $exists: true } } )
+	
+    Property.find({}, {'Description': true, 'propertyType': true, 'createdDate': true }, function(err, result) {
+		if(!err){
+			   
+         return res.json(result)	
+		}
+		else{
+			return res.status(404).send({
+                message: "Property List is not found"
+            });
+		}
+	});
+   
+};
+
+// Retrieve agent details with respected properties from database.
+exports.findPropertyAgentForLanding = (req, res) => {
+	
+	
+	//var Name = Property.findOne( { Name: { $exists: true } } )
+	
+    Property.find({}, {'agentId': true, 'Name': true, 'Email': true, 'Phone': true, 'PhotosAndMedia': true, 'Description': true, 'createdDate': true }, function(err, result) {
+		if(!err){
+			   
+         return res.json(result)	
+		}
+		else{
+			return res.status(404).send({
+                message: "Property List is not found"
+            });
+		}
+	});
+   
+};
+
 // Find a single list with a listId
 exports.findOne = (req, res) => {
     Property.findById(req.params.listId)

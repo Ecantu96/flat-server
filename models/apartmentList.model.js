@@ -6,7 +6,13 @@ const Schema = mongoose.Schema;
 const ListSchema = new Schema({
 	    title:{	type: String, required: false },
 		description:{ type: String, required: false },
-		address:{ type: String, required: false },
+		address: {
+			
+			city:{ type: String, required: true },
+			state: { type: String, required: true },
+			zipcode: { type: String, required: true },
+			country: { type: String, required: true }
+		},
 		ListImage:{
 				imageName: { type: String, required: false  },
 				imageData: { type: 'Buffer',
@@ -16,6 +22,13 @@ const ListSchema = new Schema({
 					}
 
 		},
+		
+		Neighborhood_id: { type: Object, required: false, unique: true },
+		
+		
+		favMark: { type: Boolean, required: false },
+		
+		Roommate_id: { type: Object, required: false, unique: true },
 		
 		agentId:{ type: String, required: false },
 				
