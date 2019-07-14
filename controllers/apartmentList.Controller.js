@@ -21,12 +21,16 @@ exports.create = (req, res) => {
     }
 	
 	
+	
     // Create a List
     const apartmentList = new ApartmentList({
-        title: req.body.title || "Untitled List", 
+	     title: req.body.title || "Untitled List", 
         description: req.body.description,
 		address: req.body.address,
 		ListImage: req.body.ListImage,
+		Neighborhood_id: req.body.Neighborhood_id,
+		Roommate_id: req.body.Roommate_id,
+		favMark: req.body.favMark,
 		agentId: req.user.sub
     });
 
@@ -57,6 +61,20 @@ exports.findAll = (req, res) => {
         });
     });
 };
+
+// Retrieve FavMark aprtment List
+exports.findFavlist = (req, res) => {
+	var favmark = ApartmentList.find({favMark: "true" })
+    ApartmentList.find(favmark)
+    .then(lists => {
+        res.send(lists);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Apartment Not Found"
+        });
+    });
+};
+
 
 
 // Find a single list with a listId
@@ -96,6 +114,7 @@ exports.update = (req, res) => {
         title: req.body.title || "Untitled ApartmentList",
         description: req.body.description,
 		address: req.body.address,
+		favMark: req.body.favMark,
 		ListImage: req.body.ListImage
     }, {new: true})
     .then(apartmentList => {
