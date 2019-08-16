@@ -5,16 +5,20 @@ const Schema = mongoose.Schema;
 
 const PropertySchema = new Schema({
 	    
-		propertyAddress: { type: String , required: true },
+        Address: {	type: String, required: true },
+		region: { type: String, required: true },
+		location: {
+			type: { type: String },
+			coordinates: [Number],
+		  },
 		
 		unitNumber: { type: Number, required: false },
 		
 		propertyType: { 
-						apprtment: { type: Boolean },
-	    					rooms: { type: Boolean }
+						rooms: { type: Boolean, default: null },
+						apprtment: { type: Boolean, default: null }
 		              },
-		roomForRent: { type: Boolean, required: true, default: null },
-		
+				
 		rentPrice: { type: String, required: true, default: null },
 		
 		securityDeposit: { type: String , required: true, default: null },
@@ -65,17 +69,17 @@ const PropertySchema = new Schema({
 		
 		None: { type: Boolean, required: false, default: null },
 		
-		InUnit: { type: Boolean, required: false, default: null },
+		InUnit: { type: Boolean, required: false, default: null }, 
 		
-		SharedInBuilding:{ type: Boolean, required: false },
+		SharedInBuilding:{ type: Boolean, required: false,  default: null },
 		
-		NoPetsAllowed:{ type: Boolean, required: false },
+		NoPetsAllowed:{ type: Boolean, required: false,  default: null },
 		
-		Catsok:{ type: Boolean, required: false }, 
+		Catsok:{ type: Boolean, required: false,  default: null }, 
 		
-		SmallDogsOk:{ type: Boolean, required: false },
+		SmallDogsOk:{ type: Boolean, required: false, default: null },
 		
-		LargeDogsOk:{ type: Boolean, required: false },
+		LargeDogsOk:{ type: Boolean, required: false,  default: null },
 		
 		PhotosAndMedia:{ 
 							path:  { type: String,  required: false ,

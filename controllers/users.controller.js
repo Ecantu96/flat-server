@@ -105,26 +105,41 @@ function matchRoommates(req, res, next) {
         } 
 	// var qlist = db.User.find(   { questions: "LookingRoommate" }, { $type: "questionsNecessary" }, { $type: "interestedRoommate" } );
 			//console.log(qlist);		
-	var qlist = db.User.find( { 'questions.LookingRoommate': "Quiet" } );
+	//var qlist = db.User.find( { 'questions.LookingRoommate': "Quiet" } );
 	
 	//var rules = [{ LookingRoommate: currentUser.questions.LookingRoommate }, { LookingInRoommates: currentUser.questions.LookingInRoommates }, { typeofperson: currentUser.questions.typeofperson }];
 	
-	 var rules = [{ 'question': currentUser.qlist } ];
-	//var rules = [{'questions.LookingRoommate.Loud': "true"}, { Role : "User" }];
-		var MatchRoommates = db.User.aggregate(
-	   
-		  [ { $match : {$and: rules }  } ]	, function (err, result) {
-			  
-				if (err) { 
-				   res.status(400).send({
-					message: err.message || "Some error occurred while retrieving Matching User List."
-				});
-			}
-			//200 result Ok
-		  res.status(200).send(result);
-        
-    });  
- 			
+	 //var rules = [{ questions: currentUser.qlist } ];
+	 
+	 
+		 	//User.aggregate([
+			//{ $unwind :'$questions'},
+			//{ $project : { Username: '$username',  LookingRoommate : '$questions.LookingRoommate', LookingInRoommates : '$questions.LookingInRoommates', //typeofperson: '$questions.typeofperson' } }
+			
+			//], function(err, result){
+				
+				const role_name="User";
+		        userService.getAllUserBasedOnRole(role_name, {questions: {$exists: true} })
+			  .then(users => res.json(users))
+			// .then(user => user ? res.json(user.role) : res.sendStatus(404))
+			.catch(err => next(err));
+				
+			
+				//const role_name="User";
+				// User.find(role_name, {questions: {$exists: true}}, function(err, result){
+								
+								
+				//if (err) { 
+				//   res.status(400).send({
+					//message: err.message || "Some error occurred while retrieving Matching User List."
+				//});
+			  // }
+		
+		    //res.status(200).send(result);
+				
+			//}) 
+			
+	
 
 }
 
