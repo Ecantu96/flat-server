@@ -22,11 +22,19 @@ app.get('/', (req, res) => {
 // api routes        
 app.use('/users', require('./controllers/users.controller'));    
 
+// User I am interested in..       
+//app.use('/users', require('./api/routes/IminterestedInUser.routes.js'));    
+// Apartments Lists routes
+require('./api/routes/IminterestedInUser.routes.js')(app);
+
 // Apartments Lists routes
 require('./api/routes/apartmentList.routes.js')(app);
 
 // Property Lists routes
 require('./api/routes/agentPropertyList.routes.js')(app);
+
+// Favourite Property Lists routes
+require('./api/routes/favouritePropertyList.routes.js')(app);
 
 //Agent List Count
 require('./api/routes/agentCreatedlistcount.route.js')(app);

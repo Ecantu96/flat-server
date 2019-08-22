@@ -91,99 +91,74 @@ function getUserAllQuestions(req, res, next) {
 
 
 function matchRoommates(req, res, next) {
-    
-   
-	 const id = parseInt(req.params.id);
-	 
-	  const currentUser = req.user;
-	  
-	  
-	 
-	   if (id !== currentUser.sub && currentUser.role !== Role.User) {
-        return res.status(401).json({ message: 'Unauthorized User' });
-		
-        } 
-	// var qlist = db.User.find(   { questions: "LookingRoommate" }, { $type: "questionsNecessary" }, { $type: "interestedRoommate" } );
-			//console.log(qlist);		
-	//var qlist = db.User.find( { 'questions.LookingRoommate': "Quiet" } );
+	const id = parseInt(req.params.id);
+	const currentUser = req.user;
+	var Finalresult = [];
 	
-	//var rules = [{ LookingRoommate: currentUser.questions.LookingRoommate }, { LookingInRoommates: currentUser.questions.LookingInRoommates }, { typeofperson: currentUser.questions.typeofperson }];
+	if (id !== currentUser.sub && currentUser.role !== Role.User) {
+		return res.status(401).json({ message: 'Unauthorized User' });
+	} 
+	var current_user = req.user.sub;
 	
-	 //var rules = [{ questions: currentUser.qlist } ];
-	 
-	 
-		 	//User.aggregate([
-			//{ $unwind :'$questions'},
-			//{ $project : { Username: '$username',  LookingRoommate : '$questions.LookingRoommate', LookingInRoommates : '$questions.LookingInRoommates', //typeofperson: '$questions.typeofperson' } }
-			
-			//], function(err, result){
-				
-				const role_name="User";
-		        userService.getAllUserBasedOnRole(role_name, {questions: {$exists: true} })
-			  .then(users => res.json(users))
-			// .then(user => user ? res.json(user.role) : res.sendStatus(404))
-			.catch(err => next(err));
-				
-			
-				//const role_name="User";
-				// User.find(role_name, {questions: {$exists: true}}, function(err, result){
-								
-								
-				//if (err) { 
-				//   res.status(400).send({
-					//message: err.message || "Some error occurred while retrieving Matching User List."
-				//});
-			  // }
-		
-		    //res.status(200).send(result);
-				
-			//}) 
-			
-	
-
+	 User.findOne( {_id:current_user  }, {'questions.typeofperson': true, 'questions.DoYouDrink': true, 'questions.DoYouSmoke': true, 'questions.LikeGoOut': true, 'questions.Workhours': true, 'questions.BedTime': true, 'questions.RelationshipStatus': true},  function(err, result) {
+		 
+		 //console.log(result.questions.typeofperson);
+		 
+		var rules = [{ 'questions.typeofperson': result.questions.typeofperson }, { 'questions.DoYouDrink': result.questions.DoYouDrink }, { 'questions.DoYouSmoke': result.questions.DoYouSmoke }, { 'questions.LikeGoOut': result.questions.LikeGoOut }, { 'questions.Workhours': result.questions.Workhours }, { 'questions.BedTime': result.questions.BedTime }, { 'questions.RelationshipStatus': result.questions.RelationshipStatus }  ];
+		//var rules = result;
+		console.log(rules);
+		User.aggregate(
+		  [
+		    { $match : {$and: rules }  }
+		  ], function (err, result) {
+				if (err) { 
+				   res.status(400).send({
+					message: err.message || "Some error occurred while retrieving Matching User List."
+				});
+			}
+			//200 result Ok
+			//console.log(rules);
+		  res.status(200).send(result);
+		});
+	});
 }
+
+
+
+
 
 function bestMatchs(req, res, next) {
     
-   
-	 const id = parseInt(req.params.id);
-	 
-	  const currentUser = req.user;
-	  
-	  
-	 
-	 /*   if (id !== currentUser.sub && currentUser.role !== Role.User) {
-        return res.status(401).json({ message: 'Unauthorized User' });
-		
-    }  */
-
-    function bestMatch(params,cb){
-			User.findOne(params,function(err,questions){
-				if (err || !questions){
-				   var keys = Object.keys(params);
-				   if (keys.length){
-					   delete params[keys.pop()];
-					   bestMatch(params,cb);
-				   }else{
-					   cb('No matches',null);
-				   }
-				}else{
-					cb(null,questions);
-				}
-			});
-		}
-
-		bestMatch({'LookingRoommate':'Quiet','LookingInRoommates':'Quiet','typeofperson':'Quiet', 'LookingRoommate':'Loud','LookingInRoommates':'Loud','typeofperson':'Loud', 'LookingRoommate':'Tidy','LookingInRoommates':'Tidy','typeofperson':'Tidy', 'LookingRoommate':'Messy','LookingInRoommates':'Messy','typeofperson':'Messy'},function(err,questions){
-		   // console.log(err,questions);
-			if (err) { 
-						   res.status(400).send({
-							message: err.message || "Some error occurred while retrieving Matching User List."
-						});
-					}
-					//200 result Ok
-				  res.status(200).send(questions);
-			
+   const id = parseInt(req.params.id);
+	const currentUser = req.user;
+	var Finalresult = [];
+	
+	if (id !== currentUser.sub && currentUser.role !== Role.User) {
+		return res.status(401).json({ message: 'Unauthorized User' });
+	} 
+	var current_user = req.user.sub;
+	
+	 User.findOne( {_id:current_user  }, {'questions.typeofperson': true, 'questions.DoYouDrink': true, 'questions.DoYouSmoke': true, 'questions.LikeGoOut': true, 'questions.Workhours': true, 'questions.BedTime': true, 'questions.RelationshipStatus': true},  function(err, result) {
+		 
+		 //console.log(result.questions.typeofperson);
+		 
+		var rules = [{ 'questions.typeofperson': result.questions.typeofperson }, { 'questions.DoYouDrink': result.questions.DoYouDrink }, { 'questions.DoYouSmoke': result.questions.DoYouSmoke }, { 'questions.LikeGoOut': result.questions.LikeGoOut }, { 'questions.Workhours': result.questions.Workhours }, { 'questions.BedTime': result.questions.BedTime }, { 'questions.RelationshipStatus': result.questions.RelationshipStatus }  ];
+		//var rules = result;
+		console.log(rules);
+		User.aggregate(
+		  [
+		    { $match : {$and: rules }  }
+		  ], function (err, result) {
+				if (err) { 
+				   res.status(400).send({
+					message: err.message || "Some error occurred while retrieving Matching User List."
+				});
+			}
+			//200 result Ok
+			//console.log(rules);
+		  res.status(200).send(result);
 		});
+	});
 
 }
 
