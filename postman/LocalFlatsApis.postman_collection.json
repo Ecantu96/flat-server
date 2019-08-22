@@ -22,7 +22,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"anuj121254@gmail.com\",\n\t\"password\": \"\",\n    \"questions\": {\n        \"DoYouDrink\": \"true\",\n        \"DoYouSmoke\": \"false\",\n        \"LikeGoOut\": \"false\",\n        \"LookingRoommate\": \"Loud\",\n        \"LookingInRoommates\": \"Quiet\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    },\n    \"Images\": {\n        \"ProfileImage\": {\n            \"imageName\": \"ProfileImage for Anuj 122\",\n            \"imageData\": \"Profile Image Data\"\n        },\n        \"CoverImage\": {\n            \"imageName\": \"CoverImage for Anuj 123\",\n            \"imageData\": \"Cover Image Data\"\n        }\n    },\n    \n    \"DOB\": \"01-05-1990\",\n    \"gender\": \"male\",\n    \"Role\": \"User\"\n   \n}"
+					"raw": "{\n\t\"username\": \"anuj121254@.com\",\n\t\"password\": \"\",\n    \"questions\": {\n        \"DoYouDrink\": \"true\",\n        \"DoYouSmoke\": \"false\",\n        \"LikeGoOut\": \"false\",\n        \"LookingRoommate\": \"Loud\",\n        \"LookingInRoommates\": \"Quiet\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    },\n    \"Images\": {\n        \"ProfileImage\": {\n            \"imageName\": \"ProfileImage for Anuj 122\",\n            \"imageData\": \"Profile Image Data\"\n        },\n        \"CoverImage\": {\n            \"imageName\": \"CoverImage for Anuj 123\",\n            \"imageData\": \"Cover Image Data\"\n        }\n    },\n    \n    \"DOB\": \"01-05-1990\",\n    \"gender\": \"male\",\n    \"Role\": \"User\"\n   \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/register",
@@ -32,7 +32,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"register"
@@ -69,7 +73,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"authenticate"
@@ -116,7 +124,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"current"
@@ -163,7 +175,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"5d15b96eb7011500d0dc581b"
@@ -210,7 +226,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"profile"
@@ -250,7 +270,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"userRole"
@@ -294,7 +318,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"update"
@@ -341,7 +369,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"questions"
@@ -385,7 +417,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"questions"
@@ -425,7 +461,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"viewRoommateProfile",
@@ -466,7 +506,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"profile"
@@ -513,7 +557,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roommatesByNeighbourhood",
 						"0112345678990"
@@ -560,7 +608,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roommatesByNeighbourhood",
 						"0112345678990"
@@ -607,7 +659,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"appartmentByNeighbourhood",
 						"0123456789"
@@ -654,7 +710,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"appartmentsCountsLanding"
 					]
@@ -700,7 +760,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"locationCountLanding"
 					]
@@ -746,7 +810,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -789,7 +857,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"neighbourhood"
 					]
@@ -832,7 +904,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"neighbourhood"
 					]
@@ -878,7 +954,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"neighbourhoodList"
 					]
@@ -924,7 +1004,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"appartmentsCounts"
 					]
@@ -970,7 +1054,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roommateCount"
 					]
@@ -1016,7 +1104,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"locationCount"
 					]
@@ -1062,7 +1154,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -1108,7 +1204,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllFavNeighborhoods"
 					]
@@ -1151,7 +1251,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"favouriteRoomate"
 					]
@@ -1289,7 +1393,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"apartment_search"
 					]
@@ -1335,7 +1443,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"list_details"
 					]
@@ -1381,7 +1493,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchAllRoommateByuser"
 					]
@@ -1427,7 +1543,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchUnMarkfavouriteRoommate"
 					]
@@ -1485,7 +1605,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"agentsViewbyuser"
@@ -1532,7 +1656,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"findAllRoomsByUser"
 					]
@@ -1575,7 +1703,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"markFavouriteByUser"
 					]
@@ -1621,7 +1753,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallFavListByUser"
 					]
@@ -1667,7 +1803,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallUnFavListByUser"
 					]
@@ -1713,7 +1853,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallFavListByAgent"
 					]
@@ -1759,7 +1903,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallFavList",
 						"5ce24a1ce353a9191013564a"
@@ -1802,7 +1950,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplication"
 					]
@@ -1845,7 +1997,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"markFavouriteApplicant"
 					]
@@ -1891,7 +2047,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"allMarkApplicants"
 					]
@@ -1937,7 +2097,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"allUnmarkFav"
 					]
@@ -1983,7 +2147,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"viewFavMarkApplicant",
 						"5d1c4b51d2888c1844b2525c"
@@ -2030,7 +2198,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"searchTitleList"
 					]
@@ -2056,7 +2228,11 @@
 							"host": [
 								"localhost"
 							],
+<<<<<<< HEAD
+
+=======
 							 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 							"path": [
 								"searchTitle"
 							]
@@ -2134,7 +2310,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"applicationAccept"
 					]
@@ -2180,7 +2360,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplicationByAgent"
 					]
@@ -2226,7 +2410,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"acceptedAgentApplications"
 					]
@@ -2272,7 +2460,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"declinedAgentApplications"
 					]
@@ -2318,7 +2510,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplication",
 						"5cf50c0af18d111c246fadd5"
@@ -2365,7 +2561,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"viewAllApplicant"
 					]
@@ -2411,7 +2611,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"viewSingleApplicant"
 					]
@@ -2457,7 +2661,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"alsoInterstedinList"
 					]
@@ -2500,7 +2708,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplication",
 						"5cf50c0af18d111c246fadd5"
@@ -2547,7 +2759,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"findAllRoomsByUser"
 					]
@@ -2586,7 +2802,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"fetchAllUsersDetails"
@@ -2626,7 +2846,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"matchRoommates"
@@ -2666,7 +2890,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"bestMatchs"
@@ -2725,7 +2953,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"fetchAllAgentDetails"
@@ -2769,7 +3001,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"5cd922f836ed7725288c0baf"
@@ -2884,7 +3120,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"update"
@@ -2943,7 +3183,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"current"
@@ -3002,7 +3246,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"5ce68bc88ea32b09c0354f9c"
@@ -3046,7 +3294,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property"
 					]
@@ -3092,7 +3344,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property"
 					]
@@ -3138,7 +3394,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -3184,7 +3444,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"find-fav-apartment"
 					]
@@ -3230,7 +3494,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property-landing"
 					]
@@ -3276,7 +3544,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property-few-landing"
 					]
@@ -3322,7 +3594,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property-agent-details"
 					]
@@ -3368,7 +3644,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property",
 						"5ce3eb3f02aebc283c99a995"
@@ -3412,7 +3692,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property",
 						"5cde8742d8ffe0209c19dd75"
@@ -3456,7 +3740,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property",
 						"5ce3eb3f02aebc283c99a995"
@@ -3500,7 +3788,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList"
 					]
@@ -3546,7 +3838,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList"
 					]
@@ -3582,7 +3878,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+					"raw": "{\n\n  \"username\": \"jeffchiu@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList/5cda9d92a3369510d4d62bcd",
@@ -3592,7 +3888,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList",
 						"5cda9d92a3369510d4d62bcd"
@@ -3636,7 +3936,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList",
 						"5cda9ca0a3369510d4d62bc7"
@@ -3680,7 +3984,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList",
 						"5cda9d92a3369510d4d62bcd"
@@ -3724,7 +4032,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"createAparmentList"
 					]
@@ -3770,7 +4082,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						""
@@ -3817,7 +4133,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aprtmentListCount"
 					]
@@ -3863,7 +4183,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"findAllRoomCount"
 					]
@@ -3909,7 +4233,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"CountApplications"
 					]
@@ -3945,7 +4273,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+					"raw": "{\n\n  \"username\": \"jeffchiu@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96a71cb6f2e2f0016e8d1",
@@ -3955,7 +4283,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						"5cd96a71cb6f2e2f0016e8d1"
@@ -3988,7 +4320,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+					"raw": "{\n\n  \"username\": \"jeffchiu@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96b177b3e3a086c7cded1",
@@ -3998,7 +4330,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						"5cd96b177b3e3a086c7cded1"
@@ -4042,7 +4378,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						"5cd96a71cb6f2e2f0016e8d1"
@@ -4082,7 +4422,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"agentRoleId"
@@ -4129,7 +4473,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
+
+=======
 					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"uploads",
