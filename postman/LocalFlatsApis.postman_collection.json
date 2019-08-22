@@ -32,7 +32,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"register"
@@ -69,7 +73,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"authenticate"
@@ -116,7 +124,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"current"
@@ -163,7 +175,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"5d15b96eb7011500d0dc581b"
@@ -210,7 +226,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"profile"
@@ -250,7 +270,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"userRole"
@@ -294,7 +318,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"update"
@@ -341,7 +369,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"questions"
@@ -385,7 +417,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"questions"
@@ -425,7 +461,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"viewRoommateProfile",
@@ -466,7 +506,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"profile"
@@ -513,7 +557,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roommatesByNeighbourhood",
 						"0112345678990"
@@ -560,7 +608,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roommatesByNeighbourhood",
 						"0112345678990"
@@ -607,7 +659,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"appartmentByNeighbourhood",
 						"0123456789"
@@ -654,7 +710,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"appartmentsCountsLanding"
 					]
@@ -700,7 +760,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"locationCountLanding"
 					]
@@ -746,7 +810,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -789,7 +857,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"neighbourhood"
 					]
@@ -832,7 +904,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"neighbourhood"
 					]
@@ -878,7 +954,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"neighbourhoodList"
 					]
@@ -924,7 +1004,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"appartmentsCounts"
 					]
@@ -970,7 +1054,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roommateCount"
 					]
@@ -1016,7 +1104,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"locationCount"
 					]
@@ -1062,7 +1154,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -1108,7 +1204,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllFavNeighborhoods"
 					]
@@ -1151,7 +1251,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"favouriteRoomate"
 					]
@@ -1161,50 +1265,7 @@
 			"response": []
 		},
 		{
-			"name": "searchResultCreate-by-Agent",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"price\": \"250\"\n}"
-				},
-				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchResultCreate",
-					"protocol": "https",
-					"host": [
-						"nooklyn-flats-backend-apis",
-						"herokuapp",
-						"com"
-					],
-
-					"path": [
-						"searchResultCreate"
-					]
-				},
-				"description": "Saerch filter Working is in progress"
-			},
-			"response": []
-		},
-		{
-			"name": "FindSearchResult-By-User",
+			"name": "SearchMainFilterResultAsPerGiven-By-User",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1214,7 +1275,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2Mjc2MTcwNiwiaWF0IjoxNTYyMTU2OTA2fQ.XGupZrUh9dirDL06cNltqRzw78Trcqy4CL0n3qxoeGw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzUxODQ2NywiaWF0IjoxNTYyOTEzNjY4fQ.TieOf7XK1no18g-g92NduD9HG90Bc7ssXITevIWOlYI",
 							"type": "string"
 						}
 					]
@@ -1230,22 +1291,168 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"rentPrice\": \"50\"\n}"
+					"raw": "{\n    \"rentPrice\": \"$500\",\n     \"Beds\": \"4\",\n      \"Baths\": \"2\",\n       \"region\": \"Woodbridge\"\n   \n \n}"
 				},
 				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchResult",
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/filter",
 					"protocol": "https",
 					"host": [
 						"nooklyn-flats-backend-apis",
 						"herokuapp",
 						"com"
 					],
-
+					 
 					"path": [
-						"searchResult"
+						"filter"
 					]
 				},
-				"description": "Saerch filter Working is in progress"
+				"description": "Saerch filter Result, Testing is in pending"
+			},
+			"response": []
+		},
+		{
+			"name": "Amenities_SearchResult-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzgwMTMzMiwiaWF0IjoxNTYzMTk2NTMzfQ.ScUKxsQrXIt2FlZz-w4-vxjcoVvzKeMPIy7vJ7OmZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t     \"AC\": \"true\",\n        \"BalconyDeck\": \"true\",\n        \"Furnished\": \"true\",\n        \"HardwoodFloor\": \"true\",\n        \"wheelchairAccess\": \"false\",\n        \"GarageParking\": \"true\",\n        \"OffStreetParking\": \"true\",\n        \"None\": \"true\",\n        \"InUnit\": \"false\",\n        \"SharedInBuilding\": \"false\",\n        \"NoPetsAllowed\": \"true\",\n        \"Catsok\": \"true\",\n        \"SmallDogsOk\": \"true\",\n        \"LargeDogsOk\": \"true\"\n        \n        \n }"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/amenities_search",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					 
+					"path": [
+						"amenities_search"
+					]
+				},
+				"description": "Amenities Search Result , Testing is in pending"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchAppartmentResult-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzgwMTMzMiwiaWF0IjoxNTYzMTk2NTMzfQ.ScUKxsQrXIt2FlZz-w4-vxjcoVvzKeMPIy7vJ7OmZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n    \t\"rentPrice\": \"$500\"\n  \n \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/apartment_search",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+<<<<<<< HEAD
+
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
+					"path": [
+						"apartment_search"
+					]
+				},
+				"description": "Return required data of apartment to display on search result"
+			},
+			"response": []
+		},
+		{
+			"name": "InnerDetailsPageOfList-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzgwMTMzMiwiaWF0IjoxNTYzMTk2NTMzfQ.ScUKxsQrXIt2FlZz-w4-vxjcoVvzKeMPIy7vJ7OmZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n    \t\"id\": \"5d2ec039cc70a8158c8b2740\"\n  \n \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/list_details",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+<<<<<<< HEAD
+
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
+					"path": [
+						"list_details"
+					]
+				},
+				"description": "Inner details Page of search result list"
 			},
 			"response": []
 		},
@@ -1286,7 +1493,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchAllRoommateByuser"
 					]
@@ -1332,7 +1543,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchUnMarkfavouriteRoommate"
 					]
@@ -1390,7 +1605,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"agentsViewbyuser"
@@ -1437,7 +1656,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"findAllRoomsByUser"
 					]
@@ -1480,7 +1703,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"markFavouriteByUser"
 					]
@@ -1526,7 +1753,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallFavListByUser"
 					]
@@ -1572,7 +1803,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallUnFavListByUser"
 					]
@@ -1618,7 +1853,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallFavListByAgent"
 					]
@@ -1664,7 +1903,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"fetchallFavList",
 						"5ce24a1ce353a9191013564a"
@@ -1707,7 +1950,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplication"
 					]
@@ -1750,7 +1997,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"markFavouriteApplicant"
 					]
@@ -1796,7 +2047,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"allMarkApplicants"
 					]
@@ -1842,7 +2097,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"allUnmarkFav"
 					]
@@ -1888,7 +2147,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"viewFavMarkApplicant",
 						"5d1c4b51d2888c1844b2525c"
@@ -1935,7 +2198,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"searchTitleList"
 					]
@@ -1961,7 +2228,11 @@
 							"host": [
 								"localhost"
 							],
+<<<<<<< HEAD
 
+=======
+							 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 							"path": [
 								"searchTitle"
 							]
@@ -2039,7 +2310,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"applicationAccept"
 					]
@@ -2085,7 +2360,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplicationByAgent"
 					]
@@ -2131,7 +2410,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"acceptedAgentApplications"
 					]
@@ -2177,7 +2460,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"declinedAgentApplications"
 					]
@@ -2223,7 +2510,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplication",
 						"5cf50c0af18d111c246fadd5"
@@ -2270,7 +2561,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"viewAllApplicant"
 					]
@@ -2316,7 +2611,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"viewSingleApplicant"
 					]
@@ -2362,7 +2661,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"alsoInterstedinList"
 					]
@@ -2405,7 +2708,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"listApplication",
 						"5cf50c0af18d111c246fadd5"
@@ -2452,7 +2759,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"findAllRoomsByUser"
 					]
@@ -2491,7 +2802,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"fetchAllUsersDetails"
@@ -2531,7 +2846,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"matchRoommates"
@@ -2571,7 +2890,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"bestMatchs"
@@ -2630,7 +2953,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"fetchAllAgentDetails"
@@ -2674,7 +3001,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"5cd922f836ed7725288c0baf"
@@ -2789,7 +3120,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"update"
@@ -2848,7 +3183,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"current"
@@ -2907,7 +3246,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"5ce68bc88ea32b09c0354f9c"
@@ -2941,7 +3284,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\r\n        \"propertyAddress\": \"property Address\",\r\n\t\t\r\n\t\t\"unitNumber\": \"1234567890\",\r\n\t\t\r\n\t\t \"propertyType\": { \r\n\t\t\t\t\t\t\"apprtment\": \"true\",\r\n\t\t\t\t\t\t \"rooms\": \"false\"\r\n\t\t              },\r\n\t\t \"roomForRent\": \"true\",\r\n\t\t\r\n\t\t \"rentPrice\":  \"50\",\r\n\t\t\r\n\t\t \"securityDeposit\": \"securityDeposit\",\r\n\t\t\r\n\t      \"Beds\":  \"Beds\",\r\n\t\t\r\n\t\t   \"Baths\":  \"Baths\",\r\n\t\t\r\n\t       \"squareFeet\": \"squareFeet\",\r\n\t\t\r\n\t\t   \"leaseDuration\":  \"leaseDuration\",\r\n\t\t\r\n\t\t   \"dateAvailable\": \"01-05-1990\",\r\n\t\t\r\n\t        \"leaseTerms\": \"leaseTerms\",\r\n\t\t\r\n\t\t    \"Description\":  \"Description\",\r\n\t\t\r\n\t\t   \"HidePropertyAddress\": \"false\",\r\n\t\t\r\n\t\t   \"Name\": \"Name\",\r\n\t\t\r\n\t\t   \"Email\":  \"sonia1@gmail.com\",\r\n\t\t\r\n\t\t  \"Phone\": \"1234567890\",\r\n\t\t\r\n\t\t   \"propertyOwner\": \"true\",\r\n\t\t\r\n\t\t  \"managementCompanyBroker\": \"true\",\r\n\t\t\r\n\t\t   \"Tenant\": \"false\",\r\n\t\t\r\n\t\t \"HidePhoneOnListing\": \"true\",\r\n\t\t\r\n\t\t  \"AC\":\"true\",\r\n\t\t\r\n\t\t \"BalconyDeck\": \"false\",\r\n\t\t\r\n\t\t \"Furnished\": \"true\",\r\n\t\t\r\n\t\t \"HardwoodFloor\": \"false\",\r\n\t\t\r\n\t     \"wheelchairAccess\": \"true\",\r\n\t\t\r\n\t\t \"GarageParking\": \"true\",\r\n\t\t\r\n\t\t \"OffStreetParking\": \"true\",\r\n\t\t\r\n\t\t \"None\": \"true\",\r\n\t\t\r\n\t\t \"InUnit\": \"false\",\r\n\t\t\r\n\t\t \"SharedInBuilding\": \"false\",\r\n\t\t\r\n\t\t \"NoPetsAllowed\":\"true\",\r\n\t\t\r\n\t     \"Catsok\": \"true\", \r\n\t\t\r\n\t\t \"SmallDogsOk\":\"true\",\r\n\t\t\r\n\t\t \"LargeDogsOk\":\"true\",\r\n\t\t\r\n\t     \"PhotosAndMedia\":{ \r\n\t\t\t\t\t\t\t\"path\":  \"http://google.com\",\r\n\t\t\t\t\t\t\t\"caption\":\"This is the caption\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\r\n\t\t\"ProvideGeneralAvailabilityByDay\": \"false\",\r\n\t\t\r\n\t\t\"AllowRentalApplications\": \"false\"\r\n\r\n\r\n\r\n}"
+					"raw": "{\n    \"propertyAddress\": \"Home Run Inn 1480 West Lake Street,  Addison, chicago\",\n    \"unitNumber\": \"1234567890\",\n    \"propertyType\": {\n        \"apprtment\": \"true\",\n        \"rooms\": \"false\"\n    },\n    \"rentPrice\": \"$500\",\n    \"securityDeposit\": \"securityDeposit\",\n    \"Beds\": \"4\",\n    \"Baths\": \"2\",\n    \"squareFeet\": \"150 square feet\",\n    \"leaseDuration\": \"10/01/2019 -25/12/2019\",\n    \"dateAvailable\": \"1/05/2019\",\n    \"leaseTerms\": \"leaseTerms\",\n    \"Description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida dapibus eros, mollis gravida sapien rhoncus a. In tincidunt id tellus et porttitor. Morbi eget lobortis enim, efficitur imperdiet tellus. Suspendisse tincidunt risus ipsum, ac interdum ex venenatis quis. Integer accumsan varius quam vel fringilla.\",\n    \"HidePropertyAddress\": \"false\",\n    \"Name\": \"Kunal\",\n    \"Email\": \"sidak@gmail.com\",\n    \"Phone\": \"1234567890\",\n    \"propertyOwner\": \"true\",\n    \"managementCompanyBroker\": \"true\",\n    \"Tenant\": \"false\",\n    \"HidePhoneOnListing\": \"true\",\n    \"AC\": {\n        \"value2\": \"true\"\n    },\n    \"BalconyDeck\": {\n        \"value2\": true\n    },\n    \"Furnished\": {\n        \"value2\": true\n    },\n    \"HardwoodFloor\": {\n        \"value1\": true\n    },\n    \"wheelchairAccess\": {\n        \"value2\": true\n    },\n    \"GarageParking\": {\n        \"value2\": true\n    },\n    \"OffStreetParking\": {\n    \t\"value1\": true\n    },\n    \"None\": {\n    \t\"value1\": true\n    },\n    \"InUnit\": {\n    \t\"value1\": true\n    },\n    \"SharedInBuilding\": {\n    \t\n    \t\"value1\": true\n    },\n    \"NoPetsAllowed\": {\n    \t\n    \t\"value1\": true\n    },\n    \"Catsok\": {\n    \t\"value1\": true\n    },\n    \"SmallDogsOk\": {\n    \t\"value1\": true\n    },\n    \"LargeDogsOk\": {\n    \t\"value1\": true\n    },\n    \"PhotosAndMedia\": {\n        \"path\": \"http://google.com\",\n        \"caption\": \"This is the caption\"\n    },\n    \"ProvideGeneralAvailabilityByDay\": \"false\",\n    \"AllowRentalApplications\": \"false\"\n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property",
@@ -2951,7 +3294,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property"
 					]
@@ -2997,7 +3344,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property"
 					]
@@ -3043,7 +3394,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -3089,7 +3444,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"find-fav-apartment"
 					]
@@ -3135,7 +3494,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property-landing"
 					]
@@ -3181,7 +3544,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property-few-landing"
 					]
@@ -3227,7 +3594,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property-agent-details"
 					]
@@ -3273,7 +3644,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property",
 						"5ce3eb3f02aebc283c99a995"
@@ -3317,7 +3692,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property",
 						"5cde8742d8ffe0209c19dd75"
@@ -3361,7 +3740,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"property",
 						"5ce3eb3f02aebc283c99a995"
@@ -3405,7 +3788,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList"
 					]
@@ -3451,7 +3838,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList"
 					]
@@ -3497,7 +3888,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList",
 						"5cda9d92a3369510d4d62bcd"
@@ -3541,7 +3936,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList",
 						"5cda9ca0a3369510d4d62bc7"
@@ -3585,7 +3984,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"roomsList",
 						"5cda9d92a3369510d4d62bcd"
@@ -3629,7 +4032,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"createAparmentList"
 					]
@@ -3675,7 +4082,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						""
@@ -3722,7 +4133,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aprtmentListCount"
 					]
@@ -3768,7 +4183,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"findAllRoomCount"
 					]
@@ -3814,7 +4233,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"CountApplications"
 					]
@@ -3860,7 +4283,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						"5cd96a71cb6f2e2f0016e8d1"
@@ -3903,7 +4330,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						"5cd96b177b3e3a086c7cded1"
@@ -3947,7 +4378,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"aparmentList",
 						"5cd96a71cb6f2e2f0016e8d1"
@@ -3987,7 +4422,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"agentRoleId"
@@ -4034,7 +4473,11 @@
 						"herokuapp",
 						"com"
 					],
+<<<<<<< HEAD
 
+=======
+					 
+>>>>>>> e5f065b89033c511803aec3120402e102324245c
 					"path": [
 						"users",
 						"uploads",
