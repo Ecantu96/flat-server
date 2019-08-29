@@ -106,7 +106,6 @@ function matchRoommates(req, res, next) {
 		 
 		var rules = [{ 'questions.typeofperson': result.questions.typeofperson }, { 'questions.DoYouDrink': result.questions.DoYouDrink }, { 'questions.DoYouSmoke': result.questions.DoYouSmoke }, { 'questions.LikeGoOut': result.questions.LikeGoOut }, { 'questions.Workhours': result.questions.Workhours }, { 'questions.BedTime': result.questions.BedTime }, { 'questions.RelationshipStatus': result.questions.RelationshipStatus }  ];
 		//var rules = result;
-		console.log(rules);
 		User.aggregate(
 		  [
 		    { $match : {$and: rules }  }
