@@ -22,7 +22,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"anuj121254@.com\",\n\t\"password\": \"\",\n    \"questions\": {\n        \"DoYouDrink\": \"true\",\n        \"DoYouSmoke\": \"false\",\n        \"LikeGoOut\": \"false\",\n        \"LookingRoommate\": \"Loud\",\n        \"LookingInRoommates\": \"Quiet\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    },\n    \"Images\": {\n        \"ProfileImage\": {\n            \"imageName\": \"ProfileImage for Anuj 122\",\n            \"imageData\": \"Profile Image Data\"\n        },\n        \"CoverImage\": {\n            \"imageName\": \"CoverImage for Anuj 123\",\n            \"imageData\": \"Cover Image Data\"\n        }\n    },\n    \n    \"DOB\": \"01-05-1990\",\n    \"gender\": \"male\",\n    \"Role\": \"User\"\n   \n}"
+					"raw": "{\r\n\t\"username\": \"Mahi\",\r\n\t\"password\": \"123456\",\r\n\t\"interestedRoommate\": \"true\",\r\n    \"questions\": {\r\n        \"DoYouDrink\": \"true\",\r\n        \"DoYouSmoke\": \"false\",\r\n        \"LikeGoOut\": \"false\",\r\n        \"LookingRoommate\": \"Quiet\",\r\n        \"LookingInRoommates\": \"Quiet\",\r\n        \"typeofperson\": \"Messy\",\r\n        \"Workhours\": \"PartTime\",\r\n        \"BedTime\": \"10-11pm\",\r\n        \"RelationshipStatus\": \"Single\"\r\n    },\r\n    \"Images\": {\r\n        \"ProfileImage\": {\r\n            \"imageName\": \"ProfileImage for Anuj 122\",\r\n            \"imageData\": \"Profile Image Data\"\r\n        },\r\n        \"CoverImage\": {\r\n            \"imageName\": \"CoverImage for Anuj 123\",\r\n            \"imageData\": \"Cover Image Data\"\r\n        }\r\n    },\r\n    \r\n    \"DOB\": \"01-05-1990\",\r\n    \"gender\": \"Male\",\r\n    \"Role\": \"User\"\r\n   \r\n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/register",
@@ -32,7 +32,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"register"
@@ -59,7 +59,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"arvinder@gmail.com\",\n\t\"password\": \"123456\"\n}"
+					"raw": "{\n\t\"username\": \"anuj\",\n\t\"password\": \"123456\"\n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/authenticate",
@@ -69,7 +69,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"authenticate"
@@ -90,7 +90,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NzE2NTQ4NiwiaWF0IjoxNTY2NTYwNjg2fQ.ptQV5DkJ7mGJOznSjIG3M5y6SaSq1NLFx8Hu1gchujI",
 							"type": "string"
 						}
 					]
@@ -116,7 +116,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"current"
@@ -137,7 +137,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJleHAiOjE1NjMxNjY2NDYsImlhdCI6MTU2MjU2MTg0Nn0.IhPlPV9E7l60ndUI0ycTxC6YnH8ZO2niNCyMc9qDytU",
 							"type": "string"
 						}
 					]
@@ -163,13 +163,60 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"5d15b96eb7011500d0dc581b"
 					]
 				},
 				"description": "View User details or profile"
+			},
+			"response": []
+		},
+		{
+			"name": "UserRole",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJleHAiOjE1NjYxOTQ4MjUsImlhdCI6MTU2NTU5MDAyNX0.6qiTh-rWeqJek35er--yNHvKNzY_4IW32pYUO1POmKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/userRole",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"users",
+						"userRole"
+					]
+				},
+				"description": "Fetch Current User Role"
 			},
 			"response": []
 		},
@@ -210,7 +257,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"profile"
@@ -231,7 +278,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiQWdlbnQiLCJleHAiOjE1NjM1MTY1NTAsImlhdCI6MTU2MjkxMTc1MH0.rXbx3dhDPYG-vAJvQmZiAuxZMhlUs5wzc1QWxoEhc-c",
 							"type": "string"
 						}
 					]
@@ -250,7 +297,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"userRole"
@@ -268,7 +315,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjhkZmI3MDExNTAwZDBkYzU4MTkiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NjE3MDQ2ODV9.m2W2wERGcYZxbjxHl0QVhlvAnE0ooMbY9kZi0nG9Q9c",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDMwNzM2MzM2MGJiYTA0ZWMxMDI2ZjEiLCJyb2xlIjoiQWdlbnQiLCJleHAiOjE1NjQwNjExNzAsImlhdCI6MTU2MzQ1NjM3MH0.XglSjX6eTsfj0bJbSbyqFcOx-c-Njr-j1tnKY4Otrlc",
 							"type": "string"
 						}
 					]
@@ -284,7 +331,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"nadeem@gmail.com\",\n  \"password\": \"123456\",\n  \"Role\": \"Admin\"\n   \n}"
+					"raw": "{\n\t\"username\": \"chin@gmail.com\",\n\t\"password\": \"123456\",\n    \"LicenseNumber\": \"0123456789101\",\n    \"questionsNecessary\": \"true\",\n    \"Images\": {\n        \"ProfileImage\": {\n            \"imageName\": \"ProfileImage for Sonia\",\n            \"imageData\": \"Profile Image Data\"\n        },\n        \"CoverImage\": {\n            \"imageName\": \"CoverImage for Sonia\",\n            \"imageData\": \"Cover Image Data\"\n        }\n    },\n    \n    \"DOB\": \"01-05-1990\",\n    \"gender\": \"male\",\n    \"Role\": \"Agent\"\n   \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/update",
@@ -294,7 +341,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"update"
@@ -315,7 +362,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjhkZmI3MDExNTAwZDBkYzU4MTkiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NjE3MDQ2ODV9.m2W2wERGcYZxbjxHl0QVhlvAnE0ooMbY9kZi0nG9Q9c",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NTg3MzE1MSwiaWF0IjoxNTY1MjY4MzUxfQ.dMfE6MokRHPy4Rceu-89mfos00dqXKJnueSfdE3iDX8",
 							"type": "string"
 						}
 					]
@@ -341,7 +388,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"questions"
@@ -359,7 +406,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzUxODQ2NywiaWF0IjoxNTYyOTEzNjY4fQ.TieOf7XK1no18g-g92NduD9HG90Bc7ssXITevIWOlYI",
 							"type": "string"
 						}
 					]
@@ -375,7 +422,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t \"questions\": {\n        \"DoYouDrink\": true,\n        \"DoYouSmoke\": true,\n        \"LikeGoOut\": true,\n        \"LookingRoommate\": \"Loud\",\n        \"LookingInRoommates\": \"Quiet\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    }\n   \n   }"
+					"raw": "{\n\t \"questions\": {\n        \"DoYouDrink\": true,\n        \"DoYouSmoke\": true,\n        \"LikeGoOut\": true,\n        \"LookingRoommate\": \"Quiet\",\n        \"LookingInRoommates\": \"Messy\",\n        \"typeofperson\": \"Tidy\",\n        \"Workhours\": \"PartTime\",\n        \"BedTime\": \"time2\",\n        \"RelationshipStatus\": \"Single\"\n    }\n   \n   }"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/questions",
@@ -385,7 +432,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"questions"
@@ -425,7 +472,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"viewRoommateProfile",
@@ -447,7 +494,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDQ0M2YwYzY5NDgxMzAwMTdmZDhlODMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NTg1MzQzMywiaWF0IjoxNTY1MjQ4NjMzfQ.5F-vGJtaND8OgjqdNgmcDhyCOEtWLbgMuAvy6vtWNc4",
 							"type": "string"
 						}
 					]
@@ -466,7 +513,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"profile"
@@ -506,17 +553,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roommatesByNeighbourhood/0112345678990",
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/location-basedon-neighbourhood/123456789a",
 					"protocol": "https",
 					"host": [
 						"nooklyn-flats-backend-apis",
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
-						"roommatesByNeighbourhood",
-						"0112345678990"
+						"location-basedon-neighbourhood",
+						"123456789a"
 					]
 				},
 				"description": "Aprtment Location Based on Neighborhood Id For Landing Page, \nTesting in Pending"
@@ -560,7 +607,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roommatesByNeighbourhood",
 						"0112345678990"
@@ -607,7 +654,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"appartmentByNeighbourhood",
 						"0123456789"
@@ -654,7 +701,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"appartmentsCountsLanding"
 					]
@@ -700,7 +747,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"locationCountLanding"
 					]
@@ -739,16 +786,16 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/AllNeighborhoods",
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/infoNeighborhoodsLanding",
 					"protocol": "https",
 					"host": [
 						"nooklyn-flats-backend-apis",
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
-						"AllNeighborhoods"
+						"infoNeighborhoodsLanding"
 					]
 				},
 				"description": "Retrive All Neighborhoods Information for Landing Page By Users"
@@ -789,7 +836,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"neighbourhood"
 					]
@@ -832,7 +879,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"neighbourhood"
 					]
@@ -878,7 +925,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"neighbourhoodList"
 					]
@@ -924,7 +971,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"appartmentsCounts"
 					]
@@ -970,7 +1017,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roommateCount"
 					]
@@ -1016,7 +1063,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"locationCount"
 					]
@@ -1062,7 +1109,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -1108,7 +1155,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"AllFavNeighborhoods"
 					]
@@ -1151,7 +1198,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"favouriteRoomate"
 					]
@@ -1161,50 +1208,7 @@
 			"response": []
 		},
 		{
-			"name": "searchResultCreate-by-Agent",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNDgyM30.OcnQnmbkT14aeLUn0isNYmb0TpdNMQ2M3P-xTjJgXic",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"price\": \"250\"\n}"
-				},
-				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchResultCreate",
-					"protocol": "https",
-					"host": [
-						"nooklyn-flats-backend-apis",
-						"herokuapp",
-						"com"
-					],
-
-					"path": [
-						"searchResultCreate"
-					]
-				},
-				"description": "Saerch filter Working is in progress"
-			},
-			"response": []
-		},
-		{
-			"name": "FindSearchResult-By-User",
+			"name": "SearchMainFilterResultAsPerGiven-By-User",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1214,7 +1218,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1Yjk2ZWI3MDExNTAwZDBkYzU4MWIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2Mjc2MTcwNiwiaWF0IjoxNTYyMTU2OTA2fQ.XGupZrUh9dirDL06cNltqRzw78Trcqy4CL0n3qxoeGw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzUxODQ2NywiaWF0IjoxNTYyOTEzNjY4fQ.TieOf7XK1no18g-g92NduD9HG90Bc7ssXITevIWOlYI",
 							"type": "string"
 						}
 					]
@@ -1230,22 +1234,160 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"rentPrice\": \"50\"\n}"
+					"raw": "{\n    \"region\": \"Lakeview\"\n   \n \n}"
 				},
 				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchResult",
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/filter",
 					"protocol": "https",
 					"host": [
 						"nooklyn-flats-backend-apis",
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
-						"searchResult"
+						"filter"
 					]
 				},
-				"description": "Saerch filter Working is in progress"
+				"description": "Saerch filter Result, Testing is in pending"
+			},
+			"response": []
+		},
+		{
+			"name": "Amenities_SearchResult-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzgwMTMzMiwiaWF0IjoxNTYzMTk2NTMzfQ.ScUKxsQrXIt2FlZz-w4-vxjcoVvzKeMPIy7vJ7OmZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t     \"AC\": \"true\"\n        \n        \n        \n }"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/amenities_search",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"amenities_search"
+					]
+				},
+				"description": "Amenities Search Result , Testing is in pending"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchAppartmentResult-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzgwMTMzMiwiaWF0IjoxNTYzMTk2NTMzfQ.ScUKxsQrXIt2FlZz-w4-vxjcoVvzKeMPIy7vJ7OmZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n    \t\"rentPrice\": \"$500\"\n  \n \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/apartment_search",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"apartment_search"
+					]
+				},
+				"description": "Return required data of apartment to display on search result"
+			},
+			"response": []
+		},
+		{
+			"name": "InnerDetailsPageOfList-By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDI4MjM5ZWIxMDE1OTFhZjg4MGYyZGIiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2MzgwMTMzMiwiaWF0IjoxNTYzMTk2NTMzfQ.ScUKxsQrXIt2FlZz-w4-vxjcoVvzKeMPIy7vJ7OmZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n    \t\"id\": \"5d2ec039cc70a8158c8b2740\"\n  \n \n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/list_details",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"list_details"
+					]
+				},
+				"description": "Inner details Page of search result list"
 			},
 			"response": []
 		},
@@ -1286,7 +1428,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"fetchAllRoommateByuser"
 					]
@@ -1332,7 +1474,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"fetchUnMarkfavouriteRoommate"
 					]
@@ -1390,7 +1532,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"agentsViewbyuser"
@@ -1411,7 +1553,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
 							"type": "string"
 						}
 					]
@@ -1437,7 +1579,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"findAllRoomsByUser"
 					]
@@ -1480,7 +1622,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"markFavouriteByUser"
 					]
@@ -1526,7 +1668,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"fetchallFavListByUser"
 					]
@@ -1546,7 +1688,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YmFkN2I3MDExNTAwZDBkYzU4MWQiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MTcwNTI5Nn0.xxUXYBKBDNSh3FlpVQ-m8rDD9cfRlwqrcvz0jGWqTkw",
 							"type": "string"
 						}
 					]
@@ -1572,7 +1714,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"fetchallUnFavListByUser"
 					]
@@ -1618,7 +1760,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"fetchallFavListByAgent"
 					]
@@ -1664,7 +1806,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"fetchallFavList",
 						"5ce24a1ce353a9191013564a"
@@ -1697,7 +1839,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"appliedList\": \"true\",\n  \"AppliedList_Id\": \"123d2fdfdddfd451d25\",\n  \"User_id\": \"123456ssd5d641dd42d563\"\n}\n\n  "
+					"raw": "{\n\t\"appliedList\": \"true\",\n\t\"ListTitle\": \"Arvinder\",\n  \"AppliedList_Id\": \"123d2dsfddfd451d25\",\n  \"User_id\": \"123456ssdd641dd42d563\"\n}\n\n  "
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/listApplication",
@@ -1707,7 +1849,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"listApplication"
 					]
@@ -1750,7 +1892,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"markFavouriteApplicant"
 					]
@@ -1796,7 +1938,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"allMarkApplicants"
 					]
@@ -1842,7 +1984,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"allUnmarkFav"
 					]
@@ -1888,7 +2030,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"viewFavMarkApplicant",
 						"5d1c4b51d2888c1844b2525c"
@@ -1925,7 +2067,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"ListTitle\": \"Arvinder\"\n}\n\n  "
+					"raw": "{\n   \n   \"ListTitle\": \"Arvinder\"\n}\n\n  "
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/searchTitleList",
@@ -1935,7 +2077,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"searchTitleList"
 					]
@@ -1961,7 +2103,7 @@
 							"host": [
 								"localhost"
 							],
-
+							  
 							"path": [
 								"searchTitle"
 							]
@@ -2039,7 +2181,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"applicationAccept"
 					]
@@ -2059,7 +2201,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
 							"type": "string"
 						}
 					]
@@ -2085,7 +2227,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"listApplicationByAgent"
 					]
@@ -2131,7 +2273,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"acceptedAgentApplications"
 					]
@@ -2177,7 +2319,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"declinedAgentApplications"
 					]
@@ -2197,7 +2339,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjIwNDk1NDF9.ZVLDaP07ra0gwvo9OLGznfgRHkYSPsrkJm1Nh0yqrfk",
 							"type": "string"
 						}
 					]
@@ -2213,20 +2355,19 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\t\n\t\"User_id\": \"123456ssd5d641dd42d563\"\n}"
 				},
 				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/listApplication/5cf50c0af18d111c246fadd5",
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/viewSingleApplicant",
 					"protocol": "https",
 					"host": [
 						"nooklyn-flats-backend-apis",
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
-						"listApplication",
-						"5cf50c0af18d111c246fadd5"
+						"viewSingleApplicant"
 					]
 				},
 				"description": "Retrive A single Application List By Agent"
@@ -2270,7 +2411,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"viewAllApplicant"
 					]
@@ -2309,16 +2450,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/viewSingleApplicant",
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/viewSingleApplicant/123456ssd5ddd641dd42d563",
 					"protocol": "https",
 					"host": [
 						"nooklyn-flats-backend-apis",
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
-						"viewSingleApplicant"
+						"viewSingleApplicant",
+						"123456ssd5ddd641dd42d563"
 					]
 				},
 				"description": "View Applicant By Agent"
@@ -2362,7 +2504,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"alsoInterstedinList"
 					]
@@ -2405,7 +2547,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"listApplication",
 						"5cf50c0af18d111c246fadd5"
@@ -2426,7 +2568,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDQ0MTRhZTA1MGM1MDAwMTc1MGU5M2EiLCJyb2xlIjoiQWdlbnQiLCJleHAiOjE1NjU5NjA3MTYsImlhdCI6MTU2NTM1NTkxNn0.Q-G-dUcj7xsyIKA9TjZ7usb97EoThBGbI_UczBi-O64",
 							"type": "string"
 						}
 					]
@@ -2452,7 +2594,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"findAllRoomsByUser"
 					]
@@ -2472,7 +2614,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGE4NjIzMTE3ODJjMTA4NWJmMzEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NTg2MTI2MjN9.EZNRB0N-hjKPuol3yWo3TxlDazkPdZFMdPpi4QMsIgw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Y1MmVhYzhiNWQ3ZDAwMTdlYWE3MmUiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE1NjU4NTM5MDIsImlhdCI6MTU2NTI0OTEwMn0.CHUeyr1mynf7AVasKAAF0xXH5WjVUJPMQxyoBUJX4LE",
 							"type": "string"
 						}
 					]
@@ -2491,7 +2633,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"fetchAllUsersDetails"
@@ -2512,7 +2654,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NzE2NTQ4NiwiaWF0IjoxNTY2NTYwNjg2fQ.ptQV5DkJ7mGJOznSjIG3M5y6SaSq1NLFx8Hu1gchujI",
 							"type": "string"
 						}
 					]
@@ -2531,13 +2673,134 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"matchRoommates"
 					]
 				},
-				"description": "MatchRoommates Details to show new Users, It's in pending to testing"
+				"description": "Match Results to get match Roommates When User will signup"
+			},
+			"response": []
+		},
+		{
+			"name": "SaveInterestedInRoommates--By-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NzE2NTQ4NiwiaWF0IjoxNTY2NTYwNjg2fQ.ptQV5DkJ7mGJOznSjIG3M5y6SaSq1NLFx8Hu1gchujI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"questions\": {\r\n        \"DoYouDrink\": \"true\",\r\n        \"DoYouSmoke\": \"false\",\r\n        \"LikeGoOut\": \"false\",\r\n        \"typeofperson\": \"Messy\",\r\n        \"Workhours\": \"PartTime\",\r\n        \"BedTime\": \"10-11pm\",\r\n        \"RelationshipStatus\": \"Single\"\r\n    }\r\n    \r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/SaveUpdateUserInterested",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"SaveUpdateUserInterested"
+					]
+				},
+				"description": "Save and Update with \"I m Interested in other usesr\""
+			},
+			"response": []
+		},
+		{
+			"name": "FindInterestedInRoommatesList--By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NzE2NTQ4NiwiaWF0IjoxNTY2NTYwNjg2fQ.ptQV5DkJ7mGJOznSjIG3M5y6SaSq1NLFx8Hu1gchujI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/FindCurrentUserList",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"FindCurrentUserList"
+					]
+				},
+				"description": "Find Single Result for logged in user"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchInterestedInMatchResult--By-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NzE2NTQ4NiwiaWF0IjoxNTY2NTYwNjg2fQ.ptQV5DkJ7mGJOznSjIG3M5y6SaSq1NLFx8Hu1gchujI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/fetchUserinterestQuestions",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"fetchUserinterestQuestions"
+					]
+				},
+				"description": "Fetch Final MatchRoommate Result on behalf \"I m interested In Roommate\""
 			},
 			"response": []
 		},
@@ -2552,7 +2815,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGM1MjhlYTMyYjA5YzAzNTRmOWUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTU2MDI0MzA2M30.2BfZgJ2CfvLDjVGfyjNWeek0rVXQv1y9YrANMPkeufs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDQ0M2YwYzY5NDgxMzAwMTdmZDhlODMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2NTg1MzQzMywiaWF0IjoxNTY1MjQ4NjMzfQ.5F-vGJtaND8OgjqdNgmcDhyCOEtWLbgMuAvy6vtWNc4",
 							"type": "string"
 						}
 					]
@@ -2571,7 +2834,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"bestMatchs"
@@ -2630,7 +2893,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"fetchAllAgentDetails"
@@ -2674,7 +2937,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"5cd922f836ed7725288c0baf"
@@ -2789,7 +3052,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"update"
@@ -2848,7 +3111,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"current"
@@ -2907,7 +3170,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"5ce68bc88ea32b09c0354f9c"
@@ -2941,7 +3204,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\r\n        \"propertyAddress\": \"property Address\",\r\n\t\t\r\n\t\t\"unitNumber\": \"1234567890\",\r\n\t\t\r\n\t\t \"propertyType\": { \r\n\t\t\t\t\t\t\"apprtment\": \"true\",\r\n\t\t\t\t\t\t \"rooms\": \"false\"\r\n\t\t              },\r\n\t\t \"roomForRent\": \"true\",\r\n\t\t\r\n\t\t \"rentPrice\":  \"50\",\r\n\t\t\r\n\t\t \"securityDeposit\": \"securityDeposit\",\r\n\t\t\r\n\t      \"Beds\":  \"Beds\",\r\n\t\t\r\n\t\t   \"Baths\":  \"Baths\",\r\n\t\t\r\n\t       \"squareFeet\": \"squareFeet\",\r\n\t\t\r\n\t\t   \"leaseDuration\":  \"leaseDuration\",\r\n\t\t\r\n\t\t   \"dateAvailable\": \"01-05-1990\",\r\n\t\t\r\n\t        \"leaseTerms\": \"leaseTerms\",\r\n\t\t\r\n\t\t    \"Description\":  \"Description\",\r\n\t\t\r\n\t\t   \"HidePropertyAddress\": \"false\",\r\n\t\t\r\n\t\t   \"Name\": \"Name\",\r\n\t\t\r\n\t\t   \"Email\":  \"sonia1@gmail.com\",\r\n\t\t\r\n\t\t  \"Phone\": \"1234567890\",\r\n\t\t\r\n\t\t   \"propertyOwner\": \"true\",\r\n\t\t\r\n\t\t  \"managementCompanyBroker\": \"true\",\r\n\t\t\r\n\t\t   \"Tenant\": \"false\",\r\n\t\t\r\n\t\t \"HidePhoneOnListing\": \"true\",\r\n\t\t\r\n\t\t  \"AC\":\"true\",\r\n\t\t\r\n\t\t \"BalconyDeck\": \"false\",\r\n\t\t\r\n\t\t \"Furnished\": \"true\",\r\n\t\t\r\n\t\t \"HardwoodFloor\": \"false\",\r\n\t\t\r\n\t     \"wheelchairAccess\": \"true\",\r\n\t\t\r\n\t\t \"GarageParking\": \"true\",\r\n\t\t\r\n\t\t \"OffStreetParking\": \"true\",\r\n\t\t\r\n\t\t \"None\": \"true\",\r\n\t\t\r\n\t\t \"InUnit\": \"false\",\r\n\t\t\r\n\t\t \"SharedInBuilding\": \"false\",\r\n\t\t\r\n\t\t \"NoPetsAllowed\":\"true\",\r\n\t\t\r\n\t     \"Catsok\": \"true\", \r\n\t\t\r\n\t\t \"SmallDogsOk\":\"true\",\r\n\t\t\r\n\t\t \"LargeDogsOk\":\"true\",\r\n\t\t\r\n\t     \"PhotosAndMedia\":{ \r\n\t\t\t\t\t\t\t\"path\":  \"http://google.com\",\r\n\t\t\t\t\t\t\t\"caption\":\"This is the caption\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\r\n\t\t\"ProvideGeneralAvailabilityByDay\": \"false\",\r\n\t\t\r\n\t\t\"AllowRentalApplications\": \"false\"\r\n\r\n\r\n\r\n}"
+					"raw": "{\n    \"Address\": \"5011 Brooklyn Portland Chicago IL\",\n     \"region\": \"Lakeview\",\n    \"location\":{\n    \t\"type\": \"Point\",\n    \t \"coordinates\": [34.263301,-118.302712]\n    },\n    \"unitNumber\": \"1234567890\",\n    \"propertyType\": {\n        \"apprtment\": \"true\",\n        \"rooms\": \"false\"\n    },\n    \"rentPrice\": \"$600\",\n    \"securityDeposit\": \"securityDeposit\",\n    \"Beds\": \"4\",\n    \"Baths\": \"2\",\n    \"squareFeet\": \"300\",\n    \"leaseDuration\": \"10/01/2019 -25/12/2019\",\n    \"dateAvailable\": \"1/05/2019\",\n    \"leaseTerms\": \"leaseTerms\",\n    \"Description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida dapibus eros, mollis gravida sapien rhoncus a. In tincidunt id tellus et porttitor. Morbi eget lobortis enim, efficitur imperdiet tellus. Suspendisse tincidunt risus ipsum, ac interdum ex venenatis quis. Integer accumsan varius quam vel fringilla.\",\n    \"HidePropertyAddress\": \"true\",\n    \"Name\": \"Kunal\",\n    \"Email\": \"sidak@gmail.com\",\n    \"Phone\": \"1234567890\",\n    \"propertyOwner\": \"true\",\n    \"managementCompanyBroker\": \"true\",\n    \"Tenant\": \"false\",\n    \"HidePhoneOnListing\": \"true\",\n    \"AC\": \"true\",\n    \"BalconyDeck\": \"true\",\n    \"Furnished\": \"true\",\n    \"HardwoodFloor\": \"true\",\n    \"wheelchairAccess\": \"false\",\n    \n    \"GarageParking\":  \"true\",\n   \n    \"OffStreetParking\": \"true\",\n    \"None\": \"true\",\n    \"InUnit\": \"false\",\n    \"SharedInBuilding\": \"false\",\n    \"NoPetsAllowed\": \"true\",\n    \"Catsok\": \"true\",\n    \"SmallDogsOk\": \"true\",\n    \"LargeDogsOk\": \"true\",\n    \"PhotosAndMedia\": {\n        \"path\": \"http://google.com\",\n        \"caption\": \"This is the caption\"\n    },\n    \"ProvideGeneralAvailabilityByDay\": \"false\",\n    \"AllowRentalApplications\": \"false\"\n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/property",
@@ -2951,7 +3214,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property"
 					]
@@ -2971,7 +3234,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDQ0MTRhZTA1MGM1MDAwMTc1MGU5M2EiLCJyb2xlIjoiQWdlbnQiLCJleHAiOjE1NjU5NjA3MTYsImlhdCI6MTU2NTM1NTkxNn0.Q-G-dUcj7xsyIKA9TjZ7usb97EoThBGbI_UczBi-O64",
 							"type": "string"
 						}
 					]
@@ -2997,12 +3260,55 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property"
 					]
 				},
 				"description": "View All Properties details By agent"
+			},
+			"response": []
+		},
+		{
+			"name": "MarkFavProperty --By User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2Njk5NjE5OCwiaWF0IjoxNTY2MzkxMzk4fQ.DAb2CazseBs5cVeDf0Dzu41c4YuNB2-nCmAnYVf6m2o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"favMark\": true,\n\t\"PropertyList_id\": \"124527893fdfdf\",\n\t\"agentId\": \"1ds4fdf25632dfff\"\n}"
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/MarkFavouriteProperty",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"MarkFavouriteProperty"
+					]
+				},
+				"description": "MarkFavProperty-By User"
 			},
 			"response": []
 		},
@@ -3043,7 +3349,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"AllNeighborhoods"
 					]
@@ -3089,7 +3395,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"find-fav-apartment"
 					]
@@ -3109,7 +3415,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDVkMjNhYWIyOGRkZDE0MmM3NDk4MDMiLCJyb2xlIjoiVXNlciIsImV4cCI6MTU2Njk5NjE5OCwiaWF0IjoxNTY2MzkxMzk4fQ.DAb2CazseBs5cVeDf0Dzu41c4YuNB2-nCmAnYVf6m2o",
 							"type": "string"
 						}
 					]
@@ -3135,7 +3441,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property-landing"
 					]
@@ -3181,7 +3487,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property-few-landing"
 					]
@@ -3227,7 +3533,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property-agent-details"
 					]
@@ -3273,7 +3579,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property",
 						"5ce3eb3f02aebc283c99a995"
@@ -3317,7 +3623,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property",
 						"5cde8742d8ffe0209c19dd75"
@@ -3361,7 +3667,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"property",
 						"5ce3eb3f02aebc283c99a995"
@@ -3405,7 +3711,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roomsList"
 					]
@@ -3425,7 +3731,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U2OGJjODhlYTMyYjA5YzAzNTRmOWMiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjAyNTA2NTJ9.TIFqtkfHKUuUhDsvHsT8D-GTGx83XNEBBk-UTMsbIJg",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1YjkzMmI3MDExNTAwZDBkYzU4MWEiLCJyb2xlIjoiQWdlbnQiLCJpYXQiOjE1NjE3MDQ3NjZ9.T5V2HwCGyPaJvkzTq_8rWdwgC3KSwYrB3ANNXsDqRBk",
 							"type": "string"
 						}
 					]
@@ -3451,7 +3757,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roomsList"
 					]
@@ -3487,7 +3793,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"jeffchiu@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/roomsList/5cda9d92a3369510d4d62bcd",
@@ -3497,7 +3803,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roomsList",
 						"5cda9d92a3369510d4d62bcd"
@@ -3541,7 +3847,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roomsList",
 						"5cda9ca0a3369510d4d62bc7"
@@ -3585,7 +3891,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"roomsList",
 						"5cda9d92a3369510d4d62bcd"
@@ -3619,7 +3925,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"title\": \"Lorem ipsum\",\t\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque lacus sit amet nisi molestie, quis finibus augue pretium. Fusce interdum purus in felis consequat tempor rhoncus vel mi. Integer eu volutpat lacus. Aliquam feugiat, tortor in aliquet iaculis, turpis augue mollis nibh, ut aliquet lorem enim tempor tellus. Nam eget dui id augue varius dignissim et sit amet lectus. Mauris lobortis lacus eu risus venenatis condimentum\",\n\t\"address\": {\n\t\t        \"city\": \"San Marino\",\n\t\t        \"state\": \"CA\",\n\t\t        \"zipcode\": \"90003\",\n\t\t        \"country\": \"US\"\n\t},\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Image Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t},\n\t\"favMark\": \"true\",\n\t\"Neighborhood_id\": \"011234567890\",\n\t\"Roommate_id\": \"112233445660\"\n\n}"
+					"raw": "{\n  \"title\": \"Lorem ipsum\",\t\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque lacus sit amet nisi molestie, quis finibus augue pretium. Fusce interdum purus in felis consequat tempor rhoncus vel mi. Integer eu volutpat lacus. Aliquam feugiat, tortor in aliquet iaculis, turpis augue mollis nibh, ut aliquet lorem enim tempor tellus. Nam eget dui id augue varius dignissim et sit amet lectus. Mauris lobortis lacus eu risus venenatis condimentum\",\n\t\"address\": {\n\t\t        \"city\": \"San Marino\",\n\t\t        \"state\": \"CA\",\n\t\t        \"zipcode\": \"90003\",\n\t\t        \"country\": \"US\"\n\t},\n\t\"ListImage\":{\n\t\t\n\t\t\"imageName\":\"Image Name\",\n\t\t\"imageData\": \"Image Data\"\n\t\t\n\t},\n\t\"favMark\": \"false\",\n\t\"Neighborhood_id\": \"123456789a\",\n\t\"Roommate_id\": \"112233445660a\"\n\n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/createAparmentList",
@@ -3629,7 +3935,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"createAparmentList"
 					]
@@ -3675,7 +3981,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"aparmentList",
 						""
@@ -3722,7 +4028,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"aprtmentListCount"
 					]
@@ -3768,7 +4074,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"findAllRoomCount"
 					]
@@ -3814,7 +4120,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"CountApplications"
 					]
@@ -3850,7 +4156,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"jeffchiu@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96a71cb6f2e2f0016e8d1",
@@ -3860,7 +4166,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"aparmentList",
 						"5cd96a71cb6f2e2f0016e8d1"
@@ -3893,7 +4199,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n  \"username\": \"jeffchiu@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
+					"raw": "{\n\n  \"username\": \"kunal@gmail.com\",\n  \"password\": \"123456\",\n  \"questionsNecessary\": \"yes\",\n  \"interestedRoommate\": \"no\",\n  \"questions\":{\n  \t          \n  \t          \"LookingRoommate\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"Active\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"\"\n  \t          },\n  \t          \n  \t          \"LookingInRoommates\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Quiet\": \"\",\n  \t          \t\t\t\t\t \"Loud\": \"\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"Messy\": \"Active\"\n  \t          },\n  \t          \n  \t           \"BedTime\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"time1\": \"\",\n  \t          \t\t\t\t\t \"time2\": \"11pm\",\n  \t          \t\t\t\t\t \"Tidy\": \"\",\n  \t          \t\t\t\t\t \"time3\": \"\"\n  \t          },\n  \t          \n  \t           \"DoYouDrink\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t           \"DoYouSmoke\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"yes\",\n  \t          \t\t\t\t\t \"No\": \"\"\n  \t          },\n  \t          \n  \t           \"LikeGoOut\": {\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"Yes\": \"\",\n  \t          \t\t\t\t\t \"No\": \"no\"\n  \t          },\n  \t          \n  \t          \"Workhours\":{\n  \t          \t\t\t\t\t\t\n  \t          \t\t\t\t\t\"FullTime\": \"\",\n  \t          \t\t\t\t\t \"PartTime\": \"Active\",\n  \t          \t\t\t\t\t \"StudentFullTime\": \"\",\n  \t          \t\t\t\t\t \"StudentPartTime\": \"\"\n  \t          }\n  \t          \n  }\n  \n}"
 				},
 				"url": {
 					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/aparmentList/5cd96b177b3e3a086c7cded1",
@@ -3903,7 +4209,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"aparmentList",
 						"5cd96b177b3e3a086c7cded1"
@@ -3947,7 +4253,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"aparmentList",
 						"5cd96a71cb6f2e2f0016e8d1"
@@ -3987,7 +4293,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"agentRoleId"
@@ -4034,7 +4340,7 @@
 						"herokuapp",
 						"com"
 					],
-
+					  
 					"path": [
 						"users",
 						"uploads",
@@ -4042,6 +4348,46 @@
 					]
 				},
 				"description": "This is not in use for Now"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAllUsersDetails--By-Admin Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2Y1MmVhYzhiNWQ3ZDAwMTdlYWE3MmUiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE1NjU4NTM5MDIsImlhdCI6MTU2NTI0OTEwMn0.CHUeyr1mynf7AVasKAAF0xXH5WjVUJPMQxyoBUJX4LE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nooklyn-flats-backend-apis.herokuapp.com/users/fetchAllUsersDetails",
+					"protocol": "https",
+					"host": [
+						"nooklyn-flats-backend-apis",
+						"herokuapp",
+						"com"
+					],
+					  
+					"path": [
+						"users",
+						"fetchAllUsersDetails"
+					]
+				},
+				"description": "View All Users By Admin"
 			},
 			"response": []
 		}
