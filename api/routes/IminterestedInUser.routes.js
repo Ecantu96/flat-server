@@ -1,14 +1,17 @@
 module.exports = (app) => {
-    const properties = require('../../controllers/IminterestedInUser.Controller.js');
+    const lists = require('../../controllers/IminterestedInUser.Controller.js');
 
     // Create a new List
-    app.post('/SaveUserInterested', properties.create);
+    app.post('/SaveUpdateUserInterested', lists.create);
 
     // Retrieve all List
-    app.get('/fetchUserinterestQuestions', properties.findAll);
+    app.get('/FindCurrentUserList', lists.findAll);
+	
+	//Retrieve Match users Results
+    app.get('/fetchUserinterestQuestions', lists.findInterstedInUser);
 	
 	 // Update a List with noteId
-    app.put('/UserInterestUpdate/:listId', properties.update); 
+   // app.put('/UserInterestUpdate', lists.update); 
 	
 	
 }
