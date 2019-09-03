@@ -16,6 +16,7 @@ router.get('/questions', getUserAllQuestions);
 router.get('/profile', roommateProfile);
 router.get('/uploads', profileImageData);
 router.get('/fetchAllUsersDetails', getAllUserDetails);
+router.get('/viewAllRoommates', ViewAllRoommates);
 router.get('/matchRoommates', matchRoommates);
 router.get('/bestMatchs', bestMatchs);
 router.get('/viewRoommateProfile/:id', fetchRoommateById);
@@ -103,6 +104,7 @@ function matchRoommates(req, res, next) {
 	 User.findOne( {_id:current_user  }, {'questions.typeofperson': true, 'questions.DoYouDrink': true, 'questions.DoYouSmoke': true, 'questions.LikeGoOut': true, 'questions.Workhours': true, 'questions.BedTime': true, 'questions.RelationshipStatus': true},  function(err, result) {
 		 
 		 //console.log(result.questions.typeofperson);
+		 console.log(req.user.sub);
 		 
 		var rules = [{ 'questions.typeofperson': result.questions.typeofperson }, { 'questions.DoYouDrink': result.questions.DoYouDrink }, { 'questions.DoYouSmoke': result.questions.DoYouSmoke }, { 'questions.LikeGoOut': result.questions.LikeGoOut }, { 'questions.Workhours': result.questions.Workhours }, { 'questions.BedTime': result.questions.BedTime }, { 'questions.RelationshipStatus': result.questions.RelationshipStatus }  ];
 		//var rules = result;
@@ -233,6 +235,14 @@ function getAllUserDetails(req, res, next) {
 		
     const role_name="User";
     userService.getAllUserBasedOnRole(role_name)
+          .then(users => res.json(users))
+		// .then(user => user ? res.json(user.role) : res.sendStatus(404))
+        .catch(err => next(err));
+}
+
+function ViewAllRoommates(req, res, next) {
+	const role_name="User";
+    userService.getAllUserBasedOnRole(role_name, {})
           .then(users => res.json(users))
 		// .then(user => user ? res.json(user.role) : res.sendStatus(404))
         .catch(err => next(err));
