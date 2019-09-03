@@ -1,6 +1,6 @@
 module.exports = (app) => {
     const lists = require('../../controllers/IminterestedInUser.Controller.js');
-
+     
     // Create a new List
     app.post('/SaveUpdateUserInterested', lists.create);
 
@@ -14,4 +14,4 @@ module.exports = (app) => {
    // app.put('/UserInterestUpdate', lists.update); 
 	
 	
-}
+}   
