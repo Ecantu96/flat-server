@@ -3,16 +3,13 @@
     "version": "1.0.0",
     "description": "NodeJS + MongoDB API for User Management, Authentication and Registration",
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cornflourblue/node-mongo-registration-login-api.git"
-    },
     "scripts": {
         "start": "node ./server.js",
         "start-dev": "nodemon ./server.js"
     },
     "dependencies": {
         "aggregate": "^0.1.0",
+        "async": "^3.1.0",
         "bcrypt": "^3.0.6",
         "bcryptjs": "^2.4.3",
         "bluebird": "^3.5.4",
@@ -29,11 +26,13 @@
         "http-errors": "^1.7.2",
         "jsonwebtoken": "^8.2.2",
         "mongodb": "^3.0.10",
+        "mongojs": "^2.6.0",
         "mongoose": "^5.5.6",
         "morgan": "^1.9.1",
-        "multer": "^1.4.1",
+        "multer": "^1.4.2",
         "path": "^0.12.7",
         "pg": "^7.11.0",
+        "promised-mongodb": "^1.2.4",
         "rootpath": "^0.1.2",
         "sequelize": "^5.9.2",
         "todo": "^1.1.0"

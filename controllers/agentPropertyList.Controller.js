@@ -1,5 +1,6 @@
 const Property = require('../models/agentPropertyList.model.js');
 const Role = require('../_helpers/role.js');
+const FavProperty = require('../models/favouritePropertyList.model.js');
 
 // Create and Save a new List
 exports.create = (req, res) => {
@@ -13,19 +14,21 @@ exports.create = (req, res) => {
         return res.status(401).json({ message: 'Unauthorized Agent' });
     }
 	
-    if(!req.body.propertyAddress ) {
+    if(!req.body.region ) {
         return res.status(400).send({
-            message: "Property Address can not be empty"
+            message: "Property region can not be empty"
         });
     }
 	
 	
+	
     // Create a List
     const property = new Property({
-									propertyAddress: req.body.propertyAddress || "Untitled List", 
+									Address: req.body.Address, 
+									region: req.body.region, 
+									location: req.body.location, 
 									unitNumber: req.body.unitNumber,
 									propertyType: req.body.propertyType,
-									roomForRent: req.body.roomForRent,
 									rentPrice: req.body.rentPrice,
 									securityDeposit: req.body.securityDeposit,
 									Beds: req.body.Beds,
@@ -84,6 +87,19 @@ exports.create = (req, res) => {
 // Retrieve and return all properties from the database.
 exports.findAll = (req, res) => {
     Property.find()
+    .then(properties => {
+        res.send(properties);
+    }).catch(err => {
+        res.status(404).send({       
+            message: err.message || "Properties Not Found"            //404 Not Found Result
+        });
+    });
+};
+
+
+// Retrieve and return all properties from the database.
+exports.findAllListForUsers = (req, res) => {
+	Property.find()
     .then(properties => {
         res.send(properties);
     }).catch(err => {
@@ -156,42 +172,85 @@ exports.findPropertyAgentForLanding = (req, res) => {
 
 // Find a single list with a listId
 exports.findOne = (req, res) => {
-    Property.findById(req.params.listId)
-    .then(property => {
-        if(!property) {
-            return res.status(404).send({
-                message: "Property not found with id " + req.params.listId
-            });            
-        }
-        res.send(property);
-    }).catch(err => {
-        if(err.kind === 'ObjectId') {
-            return res.status(404).send({
-                message: "ApartmentList not found with id " + req.params.listId
-            });                
-        }
-        return res.status(500).send({
-            message: "Error retrieving list with id " + req.params.listId
-        });
-    });
+	var User_id = req.user.sub;
+	var query= FavProperty.find({})
+	    query.exec(function (err, result) {
+		
+			result.forEach(function(doc) {
+			var favMark = doc.favMark;
+			var FavPropertyId = doc.PropertyList_id;
+				  
+		 
+		  Property.findById(req.params.listId)
+				.then(property => {
+					var fullPropertyDetails = new Array();;
+					fullPropertyDetails.push(property);
+					if(!property) {
+						return res.status(404).send({
+							message: "Property not found with id " + req.params.listId
+						});            
+					}
+					//console.log(property.id == req.params.listId);
+					if(property.id == FavPropertyId){
+						fullPropertyDetails.push({'favMark':favMark});
+						res.send(fullPropertyDetails);
+				   }else{
+					   res.send(property); 
+				   }
+				}).catch(err => {
+					if(err.kind === 'ObjectId') {
+						return res.status(404).send({
+							message: "ApartmentList not found with id " + req.params.listId
+						});                
+					}
+					return res.status(500).send({
+						message: "Error retrieving list with id " + req.params.listId
+					});
+				});
+				
+			
+			
+		 });
+	});
+	
+	
+    // Property.findById(req.params.listId)
+    // .then(property => {
+        // if(!property) {
+            // return res.status(404).send({
+                // message: "Property not found with id " + req.params.listId
+            // });            
+        // }
+        // res.send(property);
+    // }).catch(err => {
+        // if(err.kind === 'ObjectId') {
+            // return res.status(404).send({
+                // message: "ApartmentList not found with id " + req.params.listId
+            // });                
+        // }
+        // return res.status(500).send({
+            // message: "Error retrieving list with id " + req.params.listId
+        // });
+    // });
 };
 
 
 // Update a list identified by the listId in the request
 exports.update = (req, res) => {
     // Validate Request
-    if(!req.body.propertyAddress) {
+    if(!req.body.region) {
         return res.status(400).send({
-            message: "Property Address can not be empty"       // 400 Bad Request
+            message: "Property region can not be empty"       // 400 Bad Request
         });
     }
 
     // Find list and update it with the request body
     Property.findByIdAndUpdate(req.params.listId, {
-        propertyAddress: req.body.propertyAddress || "Untitled List", 
+                                   Address: req.body.Address, 
+                                   region: req.body.region, 
+									location: req.body.location,
 									unitNumber: req.body.unitNumber,
 									propertyType: req.body.propertyType,
-									roomForRent: req.body.roomForRent,
 									rentPrice: req.body.rentPrice,
 									securityDeposit: req.body.securityDeposit,
 									Beds: req.body.Beds,
