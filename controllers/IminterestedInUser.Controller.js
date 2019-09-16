@@ -84,36 +84,32 @@ exports.findAll = (req, res) => {
 
 };
 // Retrieve and return all lists from the database.
-exports.findInterstedInUser = (req, res) => {
+// exports.findInterstedInUser = (req, res) => {
 	
-	var user_id = req.user.sub;
+// 	var user_id = req.user.sub;
 	
-	console.log('curent User Id' + user_id);
 	
-	 ImInterstedInUser.findOne({user_id}, {'questions.typeofperson': true, 'questions.DoYouDrink': true, 'questions.DoYouSmoke': true, 'questions.LikeGoOut': true, 'questions.Workhours': true, 'questions.BedTime': true, 'questions.RelationshipStatus': true},  function(err, result) {
+// 	 ImInterstedInUser.findOne({user_id}, {'questions.typeofperson': true, 'questions.DoYouDrink': true, 'questions.DoYouSmoke': true, 'questions.LikeGoOut': true, 'questions.Workhours': true, 'questions.BedTime': true, 'questions.RelationshipStatus': true},  function(err, result) {
 		 
-		 console.log("This is Result Data ");
 		 
-		 console.log(result.questions);	
-		 
-		 var rules = [ { 'questions.typeofperson': result.questions.typeofperson }, { 'questions.DoYouDrink': result.questions.DoYouDrink }, { 'questions.DoYouSmoke': result.questions.DoYouSmoke }, { 'questions.LikeGoOut': result.questions.LikeGoOut }, { 'questions.Workhours': result.questions.Workhours }, { 'questions.BedTime': result.questions.BedTime }, { 'questions.RelationshipStatus': result.questions.RelationshipStatus }  ];
-		//var rules = result;
+// 		 var rules = [ { 'questions.typeofperson': result.questions.typeofperson }, { 'questions.DoYouDrink': result.questions.DoYouDrink }, { 'questions.DoYouSmoke': result.questions.DoYouSmoke }, { 'questions.LikeGoOut': result.questions.LikeGoOut }, { 'questions.Workhours': result.questions.Workhours }, { 'questions.BedTime': result.questions.BedTime }, { 'questions.RelationshipStatus': result.questions.RelationshipStatus }  ];
+// 		//var rules = result;
 		
 						
-		User.aggregate(
-		  [
-		    { $match : {$and: rules }  }
-		  ], function (err, result) {
-				if (err) { 
-				   res.status(400).send({
-					message: err.message || "Some error occurred while retrieving Matching User List."
-				});
-			}
-		  res.status(200).send(result);
-		});
+// 		User.aggregate(
+// 		  [
+// 		    { $match : {$and: rules }  }
+// 		  ], function (err, result) {
+// 				if (err) { 
+// 				   res.status(400).send({
+// 					message: err.message || "Some error occurred while retrieving Matching User List."
+// 				});
+// 			}
+// 		  res.status(200).send(result);
+// 		});
 		
-	 });
+// 	 });
 	
 	
-};
+// };
 

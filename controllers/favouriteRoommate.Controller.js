@@ -36,33 +36,32 @@ exports.create = (req, res) => {
 	    
 	    queryRoommate.exec(function (err, result) {
 			
-			  console.log(result);
+			  //console.log(result);
 			  //res.send(result);
 			    var favouriteRoommate_id = [];
 				  result.forEach(function(property) {
-					  
 					  favouriteRoommate_id['favouriteRoommate_id'] = property.favouriteRoommate_id; 
 					  favouriteRoommate_id['Userid'] = property.Userid; 
 					  
 				  });
-			 		
-									
+				  	 		
+							
 						if(favouriteRoommate_id['favouriteRoommate_id'] != null && favouriteRoommate_id['Userid'] != null){
-							FavouriteRoommates.updateOne({}, {                      
+						FavouriteRoommates.update({}, {                      
 											  
 											favouriteRoommate: req.body.favouriteRoommate,
 											favouriteRoommate_id: req.body.favouriteRoommate_id
 																						
-										}, {new: true})
-										.then(lists => {
-											if(!lists) {
-												return res.status(404).send({
-													message: "List not found"
-												});
-											}
-											res.json({ message: 'User Updated successfully' });
-										})
-						}else{
+							}, {new: true})
+							.then(lists => {
+								if(!lists) {
+									return res.status(404).send({
+										message: "List not found"
+									});
+								}
+								res.json({ message: 'User Updated successfully' });
+							})
+						}else {
 							
 							favouriteRoommates.save()
 								.then(data => {
@@ -102,9 +101,9 @@ exports.findFavMarkedMatchRoommate = (req, res) => {
 	
 	var query = FavouriteRoommates.find({favouriteRoommate: {$ne: false}},{"favouriteRoommate_id": true, "_id": 0})
 		query.exec(function (err, result) {
+		
 			var newArray=[];
 			result.forEach(function(doc) {
-				//console.log(doc.favouriteRoommate_id);
 				newArray.push(doc.favouriteRoommate_id);
 			});
 			User.find({"_id" : {"$in" : newArray }}, function(err, finalresult){
