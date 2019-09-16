@@ -5,10 +5,23 @@ const userService = require('../api/services/user.service');
 const User = require('../models/user.model.js');
 const Role = require('_helpers/role');
 const db = require('config/db');
+const FavouriteRoommates = require('../models/favouriteRoommate.model.js');
+var multer  = require('multer');
+var storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, 'uploads/')
+	},
+	filename: function (req, file, cb) {
+		var result = /[^/]*$/.exec(file.mimetype)[0];
+		cb(null, file.fieldname + '-' + Date.now()+'.'+result)
+	}
+})
+var upload = multer({ storage : storage }).single('avatar');
 
 //console.log(db);
 
 // routes
+router.post('/photoUpload', photoUpload);
 router.post('/authenticate', authenticate);
 router.post('/register', register);
 router.put('/questions', updateUserQuestions);
@@ -30,6 +43,39 @@ router.put('/update', update);
 router.delete('/:id', _delete);
 
 module.exports = router;
+
+function photoUpload(req, res, next){
+	const user = req.user.sub;
+	upload(req, res, function (err) {
+		if (err instanceof multer.MulterError) {
+		  // A Multer error occurred when uploading.
+		  console.log(res);
+
+		} else  {
+			// console.log(res);
+			var data = {
+				imageName:res.filename,
+				imageType:res.mimetype,
+				imagePath:res.path
+			}
+			// var data = {
+			// 	imageName:req.file.filename,
+			// 	imageType:req.file.mimetype,
+			// 	imagePath:req.file.path
+			// }
+			console.log(data);
+			User.update(
+				{ _id: user },
+				{ $set: { "ProfileImage": data } })
+				
+			.then(
+				() => res.status(200).json({message: "update successfull"}))   
+			.catch(err => next(err));
+		    }
+	
+	});
+}
+
 
 function authenticate(req, res, next) {
 	const user = req.user;
@@ -215,14 +261,51 @@ function getUserById(req, res, next) {
 function fetchRoommateById(req, res, next) {
     const currentUser = req.user;
     const id = parseInt(req.params.id);
-    // only allow admins to access other user records
-    if (id !== currentUser.sub && currentUser.role !== Role.User) {
-        return res.status(401).json({ message: 'Unauthorized User' });
-    }
-
-    userService.getById(req.params.id) 
-        .then(user => user ? res.json(user) : res.sendStatus(404))   //404 No Found Result
-        .catch(err => next(err));
+    	
+	var query= FavouriteRoommates.find({})
+	    query.exec(function (err, result) {
+		
+			result.forEach(function(doc) {
+			var favouriteRoommate = doc.favouriteRoommate;
+			var favouriteRoommate_ID = doc.favouriteRoommate_id;
+				  console.log("favouriteRoommate");
+				  console.log(favouriteRoommate);
+				  console.log("favouriteRoommate_ID");
+				  console.log(favouriteRoommate_ID);
+		 
+		  userService.getById(req.params.id)
+				.then(user => {
+					var fullPropertyDetails = new Array();;
+					fullPropertyDetails.push(user);
+					if(!user) {
+						return res.status(404).send({
+							message: "User not found with id " + req.params.listId
+						});            
+					}
+					//console.log(property.id == req.params.listId);
+					if(user.id == favouriteRoommate_ID){
+						fullPropertyDetails.push({'favouriteRoommate':favouriteRoommate});
+						res.send(fullPropertyDetails);
+				   }else{
+					   res.send(user); 
+				   }
+				}).catch(err => {
+					if(err.kind === 'ObjectId') {
+						return res.status(404).send({
+							message: "ApartmentList not found with id " + req.params.listId
+						});                
+					}
+					return res.status(500).send({
+						message: "Error retrieving list with id " + req.params.listId
+					});
+				});
+				
+			
+			
+		 });
+	});
+		
+		
 }
 
 function getAllUserDetails(req, res, next) {

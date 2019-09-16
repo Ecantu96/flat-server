@@ -1,5 +1,6 @@
 ﻿const FavouriteRoommates = require('../models/favouriteRoommate.model.js');
 const getAllUserDetails = require('./users.controller.js');
+const User = require('../models/user.model.js');
 
 //console.log(getAllUserDetails);
 
@@ -22,110 +23,98 @@ exports.create = (req, res) => {
         return res.status(401).json({ message: 'Unauthorized User' });
     }
 	
-   /*  if(!req.body.title ) {
-        return res.status(400).send({
-            message: "RoomsList Title can not be empty"
-        });
-    } */
-	
-	//const Userid = parseInt(req.params.id);
-    // Create a List
+   
     const favouriteRoommates = new FavouriteRoommates({
         favouriteRoommate: req.body.favouriteRoommate,
        	Userid: currentUser.sub,
 		favouriteRoommate_id: req.body.favouriteRoommate_id
 		
     });
-
-	  // Save List in the database
-	  
-	 // const ab = FavouriteList.findById(req.body.room_list_id);
-	  
-	if(  favouriteRoommates.favouriteRoommate_id == "" ){
-		return res.status(400).json({ message: 'Roommmate Id cant empty' });     //400 Bad Request
-    }
-	
-    favouriteRoommates.save()
-    .then(data => {
-        res.send(data);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while creating the List." 
-        });
-    });
+	   var currentUserId = req.user.sub;
+	   var roomate_Id = req.body.favouriteRoommate_id;
+	   var queryRoommate = FavouriteRoommates.find({"Userid": currentUserId, "favouriteRoommate_id": roomate_Id }) 
+	    
+	    queryRoommate.exec(function (err, result) {
+			
+			  console.log(result);
+			  //res.send(result);
+			    var favouriteRoommate_id = [];
+				  result.forEach(function(property) {
+					  
+					  favouriteRoommate_id['favouriteRoommate_id'] = property.favouriteRoommate_id; 
+					  favouriteRoommate_id['Userid'] = property.Userid; 
+					  
+				  });
+			 		
+									
+						if(favouriteRoommate_id['favouriteRoommate_id'] != null && favouriteRoommate_id['Userid'] != null){
+							FavouriteRoommates.updateOne({}, {                      
+											  
+											favouriteRoommate: req.body.favouriteRoommate,
+											favouriteRoommate_id: req.body.favouriteRoommate_id
+																						
+										}, {new: true})
+										.then(lists => {
+											if(!lists) {
+												return res.status(404).send({
+													message: "List not found"
+												});
+											}
+											res.json({ message: 'User Updated successfully' });
+										})
+						}else{
+							
+							favouriteRoommates.save()
+								.then(data => {
+									res.send(data);
+								}).catch(err => {
+									res.status(500).send({
+										message: err.message || "Some error occurred while creating the List."    //500 Server Error
+									});
+								});
+						}
+				  
+			
+		});
+	   
+	   
 };
 
 
-
-// Retrieve and return all lists from the database.
-exports.fetchAllRoommateByuser = (req, res) => {
-	
-	const currentUser = req.user;
-    const id = parseInt(req.params.id);
-    // only allow admins to access other user records
-    if (id !== currentUser.sub && currentUser.role !== Role.User) {
-        return res.status(401).json({ message: 'Unauthorized User' });
-    }
-	
-	
-	//var favouriteRoommate = "true";
-	var favouriteRoommate = FavouriteRoommates.find( { favouriteRoommate: "true" } );
-	
-    FavouriteRoommates.find(favouriteRoommate)
-    .then(lists => {
-        res.send(lists);
-    }).catch(err => {
-        res.status(404).send({
-            message: err.message || "Some error occurred while retrieving Favourite Roommate."
-        });
-    });
-};
-
-// Retrieve and return all lists from the database.
-exports.fetchAllUnMarkRoommate = (req, res) => {
-	
-	const currentUser = req.user;
-    const id = parseInt(req.params.id);
-    // only allow admins to access other user records
-    if (id !== currentUser.sub && currentUser.role !== Role.User) {
-        return res.status(401).json({ message: 'Unauthorized User' });
-    }
-	
-	
-	//var favouriteRoommate = "true";
-	var favouriteRoommate = FavouriteRoommates.find( { favouriteRoommate: "false" } );
-	
-    FavouriteRoommates.find(favouriteRoommate)
-    .then(lists => {
-        res.send(lists);
-    }).catch(err => {
-        res.status(404).send({
-            message: err.message || "Some error occurred while retrieving Favourite Roommate."
-        });
-    });
+// Retrieve Favroite Marked only.
+exports.find = (req, res) => {
+		
+		  FavouriteRoommates.find()
+		   .then(data => {
+				res.send(data);
+			}).catch(err => {
+				res.status(500).send({
+					message: err.message || "Some error occurred while creating the List."    //500 Server Error
+				});
+			});
+		
 };
 
 
-
-// Retrieve and return all lists from the database.
-exports.matchUsers = (req, res) => {
+// Fetch Favorite Marked Match Result
+exports.findFavMarkedMatchRoommate = (req, res) => {
 	
-	const currentUser = req.user;
-    const id = parseInt(req.params.id);
-    // only allow admins to access other user records
-    if (id !== currentUser.sub && currentUser.role !== Role.User) {
-        return res.status(401).json({ message: 'Unauthorized User' });
-    }
 	
-    FavouriteRoommates.find()
-    .then(getAllUserDetails => {
-        res.send(getAllUserDetails);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving Favourite Roommate."
-        });
-    });
-};
+	var query = FavouriteRoommates.find({favouriteRoommate: {$ne: false}},{"favouriteRoommate_id": true, "_id": 0})
+		query.exec(function (err, result) {
+			var newArray=[];
+			result.forEach(function(doc) {
+				//console.log(doc.favouriteRoommate_id);
+				newArray.push(doc.favouriteRoommate_id);
+			});
+			User.find({"_id" : {"$in" : newArray }}, function(err, finalresult){
+				res.json(finalresult);
+			});
+	});
+	
+		
+}
+		
 
 
 

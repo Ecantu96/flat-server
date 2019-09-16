@@ -4,12 +4,16 @@ module.exports = (app) => {
     // Create a new List
     app.post('/MarkFavouriteProperty', properties.create);
 
-    // Retrieve all List
-    app.get('/FindFavrouiteList', properties.findFavPropertyList);
+    // Retrieve all Fav marked Math Results
+    app.get('/FindFavrouiteMarkedPropertyList', properties.findFavPropertyList);
 	
 	
-    // Retrieve a single List with noteId
-    //app.get('/property/:listId', properties.findOne);
+    //Retrieve Favorite Marked only
+	
+	 app.get('/FetchFavMarked', properties.find);
+	 
+	 //Fetch Users who interted in properties
+	 app.get('/findUserInterestInproperty', properties.findUserInterestInproperty);
 
    
     // Delete a List with noteId

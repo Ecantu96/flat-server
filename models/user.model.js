@@ -49,32 +49,14 @@ const schema = new Schema({
 		
 			    },  
 	
-	Images:{
-		
-		
-				ProfileImage:{
-				imageName: { type: String, required: false  },
-				imageData: { type: 'Buffer',
-					 required: false ,
-					 data: [  104, 101, 108, 108, 111, 32, 98, 117, 102, 102, 101, 114  ] 
-
-					}
-
-				},
-				CoverImage:{
-				   imageName: { type: String, required: false  },
-					imageData: { type: 'Buffer',
-					 required: false ,
-					 data: [  101, 114, 32, 101, 111, 117, 98, 104, 109, 108, 107, 108  ] 
-
-					}
-				}
-					
-					  
 	
-			},
-			
-    Bio: { type: String, required: false, default: null},
+	ProfileImage: {
+		imageName: { type: String, required: false },
+		imageType: { type: String, required: false},
+		imagePath: { type: String, required: false}
+	},
+		
+	Bio: { type: String, required: false, default: null},
 	
 	Socials:{
 			
