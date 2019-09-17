@@ -10,7 +10,7 @@ const schema = new Schema({
 	LicenseNumber: { type: Number, required: false, default: null },
    	 questions: {
 		 
-					 LookingRoommate: {
+					LookingRoommate: {
 						type: String,
 						"enum": ["Quiet", "Loud", "Tidy", "Messy"]
 					},
@@ -54,6 +54,11 @@ const schema = new Schema({
 		imageName: { type: String, required: false },
 		imageType: { type: String, required: false},
 		imagePath: { type: String, required: false}
+	},
+	CoverPhoto: {
+		coverPhtoName: { type: String, required: false },
+		coverImageType: { type: String, required: false},
+		coverImagePath: { type: String, required: false}
 	},
 		
 	Bio: { type: String, required: false, default: null},

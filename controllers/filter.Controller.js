@@ -1,10 +1,8 @@
 const SearchResult = require('../models/filter.model.js');
 const Property = require('../models/agentPropertyList.model.js');
+const User = require('../models/user.model.js');
 const db = require('../config/db.js');
 const Role = require('../_helpers/role.js');
-
-
-
 
 // Search API based on filters
 exports.FilterAsPerGiven = (req, res) =>{
@@ -12,48 +10,76 @@ exports.FilterAsPerGiven = (req, res) =>{
 	const currentUser = req.user;
 	const id = parseInt(req.params.id);
 		   
-        var search_query =  {}
+        var query =  {}
 		
-		if (req.body.rentPrice ) {
-			search_query.rentPrice = req.body.rentPrice;
+		if (req.query.rentPrice ) {
+			query.rentPrice = req.query.rentPrice;
 		}
-		if(req.body.Beds){
-			search_query.Beds = req.body.Beds;
+
+		
+
+		if(req.query.Beds){
+			query.Beds = req.query.Beds;
 		}
-		if(req.body.Baths){
-			search_query.Baths = req.body.Baths;
+		if(req.query.Baths){
+			query.Baths = req.query.Baths;
 		} 
 		
-		if(req.body.squareFeet){
-			search_query.squareFeet = req.body.squareFeet;
+		if(req.query.squareFeet){
+			query.squareFeet = req.query.squareFeet;
 		}
-		
-	
-		if(req.body.location){
-			search_query.location = req.body.location;
+		if(req.query.location){
+			query.location = req.query.location;
 			
 		}
-		if(req.body.region){
-			search_query.region = req.body.region;
-			//search.apprtment = req.body.apprtment;
-			
+		if(req.query.region){
+			query.region = req.query.region;
 		}
 		
-	
-		
-	Property.find(search_query, { "propertyType.apprtment": true, "rentPrice": true, "PhotosAndMedia": true, "Address": true, "Beds": true, "Baths": true, "PhotosAndMedia": true, "squareFeet": true, "location": true, "region": true, "createdDate": true  }, function(err, lists){
-				
-				if (err){
-					return res.status(404).json({ message: 'Not found the result' });
-				}
-								
-				res.send(lists);
-				
-			}); 
+			 
+		Property.find(req.query, { "propertyType.apprtment": true, "rentPrice": true, "PhotosAndMedia": true, "Address": true, "Beds": true, "Baths": true, "PhotosAndMedia": true, "squareFeet": true, "location": true, "region": true, "createdDate": true,  "Name": true   }, function(err, lists){
+					
+					if (err){
+						return res.status(404).json({ message: 'Not found the result' });
+					}
+									
+					res.send(lists);
+					
+				}); 
+
+    //}
 	
 	
 	
 };
+
+// Search Roommate API based on filters
+exports.RoommateFilter = (req, res) =>{
+	
+	const currentUser = req.user;
+	const id = parseInt(req.params.id);
+		   
+        var query =  {}
+		
+		if (req.query.LookingRoommate ) {
+			query.LookingRoommate = req.LookingRoommate;
+		}
+		
+		User.find({ 'questions.LookingRoommate': req.query.LookingRoommate }, function(err, lists){
+					
+					if (err){
+						return res.status(404).json({ message: 'Not found the result' });
+					}
+									
+					res.send(lists);
+					
+		}); 
+
+   
+	
+	
+};
+
 
 
 //return required data of apartment to display on search result

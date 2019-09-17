@@ -13,7 +13,8 @@ function jwt() {
 			'/users/viewAllRoommates',
 			'/property',
             '/properties',
-            '/filter'
+            '/filter',
+            '/roommate-filter'
             
 									
         ]
