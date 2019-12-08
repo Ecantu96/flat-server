@@ -2,7 +2,21 @@ README for Server API Documentation
 
 Internal Use only
 
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
 Running the Flats NodeJS + Express.js + MongoDB API Locally
+
+### `nodemon` 
+Rerun the backend Server continuously
+
+### `sudo mongod` 
+Run the MongoDB database 
+
+## Requirements 
 
 Install NodeJS and NPM from  https://nodejs.org/en/download/.
 
