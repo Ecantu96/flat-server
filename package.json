@@ -25,7 +25,7 @@
         "heroku": "^7.24.3",
         "http-errors": "^1.7.3",
         "jsonwebtoken": "^8.2.2",
-        "mongodb": "^3.0.10",
+        "mongodb": "^3.4.1",
         "mongojs": "^3.1.0",
         "mongoose": "^5.7.5",
         "morgan": "^1.9.1",
