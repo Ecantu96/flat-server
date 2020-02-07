@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());    
 
-
 // use JWT auth to secure the api
 app.use(jwt());    
                             
@@ -51,7 +50,6 @@ require('./api/routes/ListAllApplication.routes.js')(app);
 // Rooms Lists routes
 require('./api/routes/roomsList.routes.js')(app);
 
-
 // Favourite Applicants for property
 require('./api/routes/favouriteApplicant.route.js')(app);
 
@@ -65,7 +63,6 @@ require('./api/routes/neighbourhood.routes.js')(app);
 const dbConfig = require('./config/database.config.js');
 
 
-
 // global error handler
 app.use(errorHandler);
       
@@ -75,14 +72,10 @@ const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
 
-
 //const dbConfig = require('./config.json');
 const mongoose = require('mongoose');
 
-
-
 mongoose.Promise = global.Promise;    
-
 
 // Connecting to the database
 mongoose.connect(dbConfig.url, {
@@ -90,6 +83,6 @@ useNewUrlParser: true
 }).then(() => {
  console.log("Successfully connected to the database");    
 }).catch(err => {
- console.log('Could not connect to the database. Exiting now...', err);
+ console.log('Could not connect to the MongoDB Database. Exiting now...', err);
  process.exit();
 });
