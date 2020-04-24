@@ -34,7 +34,7 @@
         "pg": "^7.18.1",
         "promised-mongodb": "^1.2.4",
         "rootpath": "^0.1.2",
-        "sequelize": "^5.21.4",
+        "sequelize": "^5.21.7",
         "todo": "^1.1.0"
     },
     "devDependencies": {
