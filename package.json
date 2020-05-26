@@ -20,7 +20,7 @@
         "crypto": "^1.0.1",
         "express": "^4.17.1",
         "express-jwt": "^5.3.3",
-        "express-session": "^1.17.0",
+        "express-session": "^1.17.1",
         "file": "^0.2.2",
         "heroku": "^7.41.1",
         "http-errors": "^1.7.3",
